@@ -7,7 +7,7 @@ video_capture = cv2.VideoCapture('video.mp4')
 # Set up video writer
 frame_width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Change to 'mp4v'
 out = cv2.VideoWriter('output.mp4', fourcc, 30, (frame_width, frame_height))
 
 # Initialize emotion count dictionary
