@@ -1,0 +1,90 @@
+[
+  {
+    "Emotion": "Confident",
+    "Body Language": "Upright posture",
+    "Ambiance": "Neutral",
+    "Polarity": "Positive",
+    "Efficiency": "",
+    "Repetitive Gestures": "No repetitive gestures"
+  },
+  {
+    "Emotion": "Nervous",
+    "Body Language": "Fidgeting",
+    "Ambiance": "Noisy",
+    "Polarity": "Negative",
+    "Efficiency": "",
+    "Repetitive Gestures": "Pacing back and forth"
+  },
+  {
+    "Emotion": "Engaged",
+    "Body Language": "Leaning forward",
+    "Ambiance": "Calm",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": "Hand movements"
+  },
+  {
+    "Emotion": "Distracted",
+    "Body Language": "Arms crossed",
+    "Ambiance": "Chaotic",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": "Nail biting"
+  },
+  {
+    "Emotion": "Enthusiastic",
+    "Body Language": "Gesturing",
+    "Ambiance": "Energetic",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": "Finger tapping"
+  },
+  {
+    "Emotion": "Bored",
+    "Body Language": "Slouched posture",
+    "Ambiance": "Dull",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": "Hair twirling"
+  },
+  {
+    "Emotion": "Anxious",
+    "Body Language": "Tapping fingers",
+    "Ambiance": "Tense",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": ""
+  },
+  {
+    "Emotion": "Attentive",
+    "Body Language": "Maintaining eye contact",
+    "Ambiance": "Serene",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": ""
+  },
+  {
+    "Emotion": "Relaxed",
+    "Body Language": "Open body language",
+    "Ambiance": "Comfortable",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": ""
+  },
+  {
+    "Emotion": "Agitated",
+    "Body Language": "Rapid movements",
+    "Ambiance": "Disruptive",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": ""
+  },
+  {
+    "Emotion": "",
+    "Body Language": "Covering Face",
+    "Ambiance": "",
+    "Polarity": "",
+    "Efficiency": "",
+    "Repetitive Gestures": ""
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "Emotion": "Amusement",
+    "Facial Expressions": "Smiling, crinkling eyes",
+    "Body Language": "Leaning back, relaxed posture",
+    "Vocal Cues": "Playful tone, giggling"
+  },
+  {
+    "Emotion": "Anguish",
+    "Facial Expressions": "Crying, pained expression",
+    "Body Language": "Clutching chest, hunched over",
+    "Vocal Cues": "Sobbing, wailing"
+  },
+  {
+    "Emotion": "Anticipation",
+    "Facial Expressions": "Raised eyebrows, alert expression",
+    "Body Language": "Leaning forward, eager",
+    "Vocal Cues": "Excited tone, heightened energy"
+  },
+  {
+    "Emotion": "Anxiety",
+    "Facial Expressions": "Nervous fidgeting, restless eyes",
+    "Body Language": "Pacing, tapping foot",
+    "Vocal Cues": "Rapid speech, worried tone"
+  },
+  {
+    "Emotion": "Assertiveness",
+    "Facial Expressions": "Firm expression, direct gaze",
+    "Body Language": "Strong body language",
+    "Vocal Cues": "Authoritative tone, concise speech"
+  },
+  {
+    "Emotion": "Awe",
+    "Facial Expressions": "Wide eyes, dropped jaw",
+    "Body Language": "Frozen posture, stillness",
+    "Vocal Cues": "Breathless tone, awe-filled"
+  },
+  {
+    "Emotion": "Boredom",
+    "Facial Expressions": "Blank expression, distant gaze",
+    "Body Language": "Slouched posture",
+    "Vocal Cues": "Monotonous tone, lack of enthusiasm"
+  },
+  {
+    "Emotion": "Calmness",
+    "Facial Expressions": "Serene expression, even breath",
+    "Body Language": "Relaxed posture",
+    "Vocal Cues": "Soothing tone, slow speech"
+  },
+  {
+    "Emotion": "Composure",
+    "Facial Expressions": "Calm expression, steady gaze",
+    "Body Language": "Balanced posture",
+    "Vocal Cues": "Controlled tone, measured speech"
+  },
+  {
+    "Emotion": "Confidence",
+    "Facial Expressions": "Relaxed smile, direct eye contact",
+    "Body Language": "Open and upright posture",
+    "Vocal Cues": "Assured tone, clear articulation"
+  },
+  {
+    "Emotion": "Confusion",
+    "Facial Expressions": "Puzzled look, furrowed brow",
+    "Body Language": "Head tilting, scratching head",
+    "Vocal Cues": "Uncertain tone, asking for clarification"
+  },
+  {
+    "Emotion": "Contempt",
+    "Facial Expressions": "Sneer, raised eyebrow",
+    "Body Language": "Crossed arms",
+    "Vocal Cues": "Patronizing tone, sarcasm"
+  },
+  {
+    "Emotion": "Curiosity",
+    "Facial Expressions": "Raised eyebrows, attentive gaze",
+    "Body Language": "Leaning in, focused",
+    "Vocal Cues": "Inquisitive tone, asking questions"
+  },
+  {
+    "Emotion": "Determination",
+    "Facial Expressions": "Firm jaw, focused eyes",
+    "Body Language": "Upright and forward-leaning posture",
+    "Vocal Cues": "Resolute tone, strong conviction"
+  },
+  {
+    "Emotion": "Disappointment",
+    "Facial Expressions": "Frowning, downturned mouth",
+    "Body Language": "Slumping shoulders",
+    "Vocal Cues": "Deflated tone, sighs"
+  },
+  {
+    "Emotion": "Disgust",
+    "Facial Expressions": "Wrinkled nose, grimace",
+    "Body Language": "Turning away",
+    "Vocal Cues": "Disapproving tone"
+  },
+  {
+    "Emotion": "Eagerness",
+    "Facial Expressions": "Wide eyes, leaning forward",
+    "Body Language": "Active gestures, engaged movements",
+    "Vocal Cues": "Enthusiastic tone, energetic speech"
+  },
+  {
+    "Emotion": "Embarrassment",
+    "Facial Expressions": "Blushing, avoiding eye contact",
+    "Body Language": "Nervous laughter",
+    "Vocal Cues": "Stammering, self-consciousness"
+  },
+  {
+    "Emotion": "Excitement",
+    "Facial Expressions": "Animated gestures, wide smile",
+    "Body Language": "Leaning forward, energetic movements",
+    "Vocal Cues": "Enthusiastic tone, rapid speech"
+  },
+  {
+    "Emotion": "Exhaustion",
+    "Facial Expressions": "Droopy eyes, heavy-lidded",
+    "Body Language": "Slumped posture, sluggish movements",
+    "Vocal Cues": "Fatigued tone, weary speech"
+  },
+  {
+    "Emotion": "Fear",
+    "Facial Expressions": "Wide eyes, raised eyebrows",
+    "Body Language": "Backing away, defensive",
+    "Vocal Cues": "Trembling voice, whispering"
+  },
+  {
+    "Emotion": "Frustration",
+    "Facial Expressions": "Frowning, forehead wrinkles",
+    "Body Language": "Tapping fingers, agitated movements",
+    "Vocal Cues": "Irritated tone, sighing"
+  },
+  {
+    "Emotion": "Guilt",
+    "Facial Expressions": "Avoiding eye contact",
+    "Body Language": "Slumped posture",
+    "Vocal Cues": "Apologetic tone, self-reproach"
+  },
+  {
+    "Emotion": "Happiness",
+    "Facial Expressions": "Smiling, bright eyes",
+    "Body Language": "Relaxed posture, leaning in",
+    "Vocal Cues": "Lively tone, laughter"
+  },
+  {
+    "Emotion": "Insecurity",
+    "Facial Expressions": "Nervous glances, self-touching",
+    "Body Language": "Hunched posture, crossed arms",
+    "Vocal Cues": "Hesitant tone, self-doubt"
+  },
+  {
+    "Emotion": "Interest",
+    "Facial Expressions": "Raised eyebrows, focused gaze",
+    "Body Language": "Leaning forward",
+    "Vocal Cues": "Engaged tone, asking thoughtful questions"
+  },
+  {
+    "Emotion": "Jealousy",
+    "Facial Expressions": "Tense facial expression, narrowed eyes",
+    "Body Language": "Clenched fists, defensive stance",
+    "Vocal Cues": "Sarcastic or resentful tone"
+  },
+  {
+    "Emotion": "Loneliness",
+    "Facial Expressions": "Downcast gaze, withdrawn posture",
+    "Body Language": "Hugging oneself, crossed arms",
+    "Vocal Cues": "Quiet tone, longing sighs"
+  },
+  {
+    "Emotion": "Love",
+    "Facial Expressions": "Softened expression, warm smile",
+    "Body Language": "Tender touches",
+    "Vocal Cues": "Affectionate tone, endearment"
+  },
+  {
+    "Emotion": "Nervousness",
+    "Facial Expressions": "Fidgeting, rapid blinking",
+    "Body Language": "Tense posture, crossed arms",
+    "Vocal Cues": "Shaky voice, stuttering"
+  },
+  {
+    "Emotion": "Politeness",
+    "Facial Expressions": "Pleasant smile, nodding",
+    "Body Language": "Open body posture",
+    "Vocal Cues": "Respectful tone, appropriate language"
+  },
+  {
+    "Emotion": "Pride",
+    "Facial Expressions": "Raised chin, confident posture",
+    "Body Language": "Expanded chest, head held high",
+    "Vocal Cues": "Assertive tone, self-assuredness"
+  },
+  {
+    "Emotion": "Professionalism",
+    "Facial Expressions": "Neutral expression, attentive gaze",
+    "Body Language": "Upright posture",
+    "Vocal Cues": "Clear, confident tone"
+  },
+  {
+    "Emotion": "Puzzlement",
+    "Facial Expressions": "Raised eyebrows, quizzical look",
+    "Body Language": "Head tilted, hand on chin",
+    "Vocal Cues": "Perplexed tone, questioning"
+  },
+  {
+    "Emotion": "Relief",
+    "Facial Expressions": "Relaxing facial muscles",
+    "Body Language": "Sighing, releasing tension",
+    "Vocal Cues": "Easing of tension in voice"
+  },
+  {
+    "Emotion": "Sadness",
+    "Facial Expressions": "Downcast expression",
+    "Body Language": "Slumped shoulders",
+    "Vocal Cues": "Soft voice, sighing"
+  },
+  {
+    "Emotion": "Satisfaction",
+    "Facial Expressions": "Satisfied smile, nodding",
+    "Body Language": "Leaning back, arms crossed",
+    "Vocal Cues": "Contented tone, relaxed speech"
+  },
+  {
+    "Emotion": "Surprise",
+    "Facial Expressions": "Widened eyes, raised eyebrows",
+    "Body Language": "Leaning forward",
+    "Vocal Cues": "Gasping, sudden tone shift"
+  },
+  {
+    "Emotion": "Sympathy",
+    "Facial Expressions": "Soft, empathetic expression",
+    "Body Language": "Gentle touch, comforting gestures",
+    "Vocal Cues": "Compassionate tone, understanding"
+  }
+]
