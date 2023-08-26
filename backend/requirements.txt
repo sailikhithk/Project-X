@@ -1,0 +1,7 @@
+flask_cors
+flask_bcrypt
+flask_jwt_extended
+flask_mail
+flask
+flask_sqlalchemy
+twine
