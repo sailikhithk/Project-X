@@ -1,4 +1,0 @@
-I'm working on emotion recognition AI tool for virtual interviews from video recordings where I am analyziing video and recognizing emotions of people at different intervals of time. I'm thinking to use https://www.kaggle.com/datasets/msambare/fer2013?resource=download FER 2013 dataset. Please ask better questions and help me get the job done using python and AI. 
-
-every single emotion we should be able to detect from humans from interview perspective and even nuances like body language cue liks posture, hair or nose picking, count the missing eye contact for every 10mins etc. Check the surroundings for noise and check lighting in the room etc.
-
