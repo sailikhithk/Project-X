@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Registration.css";
 
 const Registration = () => {
+  const [formData, setFormData] = useState({
+    institutionName: "",
+    contactName: "",
+    contactEmailAddress: "",
+    contactPhoneNumber: "",
+    numberOfStudents: "",
+    institutionPOC: "",
+    numberOfDepartments: "",
+    country: "",
+    city: "",
+    contactDesignation: "",
+    registrationNumber: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("/registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.status === 200) {
+        console.log("Registration successful");
+      } else {
+        console.log("Registration failed");
+      }
+    } catch (error) {
+      console.log("There was an error sending the data", error);
+    }
+  };
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <div className="container">
@@ -14,20 +57,13 @@ const Registration = () => {
                   <div>
                     <h2 className="registration-header">Create Institution</h2>
                     <p className="registration-sub-header">
-                      Kick start your journey to get access to our expert
-                      insights about your students across departments, branches,
-                      and cities today!
+                      Kick start your journey to get access to our expert insights about your students across departments, branches, and cities today!
                     </p>
                     <div className="registration-form-container">
-                      {/* Existing form fields */}
-                      {/* Row 1 */}
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="institutionName"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="institutionName" className="form-label registration-form-label">
                               Institution Name
                             </label>
                             <input
@@ -36,15 +72,14 @@ const Registration = () => {
                               id="institutionName"
                               name="institutionName"
                               placeholder="Enter your University's name as per any Govt Records"
+                              value={formData.institutionName}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="contactName"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="contactName" className="form-label registration-form-label">
                               Contact Name
                             </label>
                             <input
@@ -53,36 +88,32 @@ const Registration = () => {
                               id="contactName"
                               name="contactName"
                               placeholder="Enter the name of who needs to be contacted"
+                              value={formData.contactName}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* Row 2 */}
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="contactEmailAddress"
-                              className="form-label registration-form-label"
-                            >
-                              Contact Email address
+                            <label htmlFor="contactEmailAddress" className="form-label registration-form-label">
+                              Contact Email Address
                             </label>
                             <input
-                              type="text"
+                              type="email"
                               className="form-control registration-input-control"
                               id="contactEmailAddress"
                               name="contactEmailAddress"
                               placeholder="Enter the email of the person who needs to be contacted"
+                              value={formData.contactEmailAddress}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="contactPhoneNumber"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="contactPhoneNumber" className="form-label registration-form-label">
                               Contact Phone Number
                             </label>
                             <input
@@ -91,74 +122,66 @@ const Registration = () => {
                               id="contactPhoneNumber"
                               name="contactPhoneNumber"
                               placeholder="Enter the phone number of the person who needs to be contacted"
+                              value={formData.contactPhoneNumber}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* Row 3 */}
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="numberOfStudents"
-                              className="form-label registration-form-label"
-                            >
-                              Number of students
+                            <label htmlFor="numberOfStudents" className="form-label registration-form-label">
+                              Number of Students
                             </label>
                             <input
-                              type="text"
+                              type="number"
                               className="form-control registration-input-control"
                               id="numberOfStudents"
                               name="numberOfStudents"
                               placeholder="Enter the number of students"
+                              value={formData.numberOfStudents}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="institutionPOC"
-                              className="form-label registration-form-label"
-                            >
-                              Institution POC (point of contact)
+                            <label htmlFor="institutionPOC" className="form-label registration-form-label">
+                              Institution POC (Point Of Contact)
                             </label>
                             <input
                               type="text"
                               className="form-control registration-input-control"
                               id="institutionPOC"
                               name="institutionPOC"
-                              placeholder="Enter the point of contact for the institution"
+                              placeholder="Enter the name of the point of contact"
+                              value={formData.institutionPOC}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* Row 4 */}
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="numberOfDepartments"
-                              className="form-label registration-form-label"
-                            >
-                              Number of departments
+                            <label htmlFor="numberOfDepartments" className="form-label registration-form-label">
+                              Number of Departments
                             </label>
                             <input
-                              type="text"
+                              type="number"
                               className="form-control registration-input-control"
                               id="numberOfDepartments"
                               name="numberOfDepartments"
                               placeholder="Enter the number of departments"
+                              value={formData.numberOfDepartments}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="country"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="country" className="form-label registration-form-label">
                               Country
                             </label>
                             <input
@@ -166,20 +189,17 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="country"
                               name="country"
-                              placeholder="Enter country"
+                              placeholder="Enter Country"
+                              value={formData.country}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* Row 5 */}
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="city"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="city" className="form-label registration-form-label">
                               City
                             </label>
                             <input
@@ -187,16 +207,15 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="city"
                               name="city"
-                              placeholder="Enter city"
+                              placeholder="Enter City"
+                              value={formData.city}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="contactDesignation"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="contactDesignation" className="form-label registration-form-label">
                               Contact's Designation
                             </label>
                             <input
@@ -204,21 +223,17 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="contactDesignation"
                               name="contactDesignation"
-                              placeholder="Enter contact's designation"
+                              placeholder="Enter Designation"
+                              value={formData.contactDesignation}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* New row for Registration Number and Password */}
                       <div className="row">
-                        {/* Registration Number */}
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="registrationNumber"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="registrationNumber" className="form-label registration-form-label">
                               Registration Number
                             </label>
                             <input
@@ -226,17 +241,15 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="registrationNumber"
                               name="registrationNumber"
-                              placeholder="Enter Reg. no"
+                              placeholder="Enter Registration Number"
+                              value={formData.registrationNumber}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
-                        {/* Password */}
                         <div className="col">
                           <div className="mb-3">
-                            <label
-                              htmlFor="password"
-                              className="form-label registration-form-label"
-                            >
+                            <label htmlFor="password" className="form-label registration-form-label">
                               Password
                             </label>
                             <input
@@ -245,20 +258,20 @@ const Registration = () => {
                               id="password"
                               name="password"
                               placeholder="Enter Password"
+                              value={formData.password}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
                       </div>
-
-                      {/* Submit button and footer */}
                       <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                        <button type="button" className="btn btn-primary">
+                        <button type="button" className="btn btn-primary" onClick={handleSubmit}>
                           Submit
                         </button>
                       </div>
                       <div className="mt-1 text-center">
                         <span className="registration-footer-container">
-                          Already have an account?{" "}
+                          Already have an account?
                         </span>
                         <span className="registration-footer-container login-redirect">
                           <Link className="text-decoration-none" to={"/"}>
