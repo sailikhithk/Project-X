@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Registration.css";
 
 const Registration = () => {
@@ -16,12 +15,14 @@ const Registration = () => {
                     <h2 className="registration-header">Create Institution</h2>
                     <p className="registration-sub-header">
                       Kick start your journey to get access to our expert
-                      insights about your students across departments, branches
+                      insights about your students across departments, branches,
                       and cities today!
                     </p>
                     <div className="registration-form-container">
-                      <div class="row">
-                        <div class="col">
+                      {/* Existing form fields */}
+                      {/* Row 1 */}
+                      <div className="row">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="institutionName"
@@ -38,7 +39,7 @@ const Registration = () => {
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="contactName"
@@ -56,8 +57,10 @@ const Registration = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+
+                      {/* Row 2 */}
+                      <div className="row">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="contactEmailAddress"
@@ -74,7 +77,7 @@ const Registration = () => {
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="contactPhoneNumber"
@@ -87,13 +90,15 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="contactPhoneNumber"
                               name="contactPhoneNumber"
-                              placeholder="Enter the email of the person who needs to be contacted"
+                              placeholder="Enter the phone number of the person who needs to be contacted"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+
+                      {/* Row 3 */}
+                      <div className="row">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="numberOfStudents"
@@ -106,33 +111,35 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="numberOfStudents"
                               name="numberOfStudents"
-                              placeholder="Enter the name of students"
+                              placeholder="Enter the number of students"
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <div className="mb-3">
                             <label
-                              htmlFor="instutionPOC"
+                              htmlFor="institutionPOC"
                               className="form-label registration-form-label"
                             >
-                              Institutuin POC (point of contact)
+                              Institution POC (point of contact)
                             </label>
                             <input
                               type="text"
                               className="form-control registration-input-control"
-                              id="instutionPOC"
-                              name="instutionPOC"
-                              placeholder="Enter the email of the person who needs to be contacted"
+                              id="institutionPOC"
+                              name="institutionPOC"
+                              placeholder="Enter the point of contact for the institution"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+
+                      {/* Row 4 */}
+                      <div className="row">
+                        <div className="col">
                           <div className="mb-3">
                             <label
-                              htmlFor="numberOfDepartment"
+                              htmlFor="numberOfDepartments"
                               className="form-label registration-form-label"
                             >
                               Number of departments
@@ -140,13 +147,13 @@ const Registration = () => {
                             <input
                               type="text"
                               className="form-control registration-input-control"
-                              id="numberOfDepartment"
-                              name="numberOfDepartment"
+                              id="numberOfDepartments"
+                              name="numberOfDepartments"
                               placeholder="Enter the number of departments"
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="country"
@@ -159,13 +166,15 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="country"
                               name="country"
-                              placeholder="Enter Country"
+                              placeholder="Enter country"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col">
+
+                      {/* Row 5 */}
+                      <div className="row">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="city"
@@ -178,11 +187,11 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="city"
                               name="city"
-                              placeholder="Enter City"
+                              placeholder="Enter city"
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                           <div className="mb-3">
                             <label
                               htmlFor="contactDesignation"
@@ -195,41 +204,68 @@ const Registration = () => {
                               className="form-control registration-input-control"
                               id="contactDesignation"
                               name="contactDesignation"
-                              placeholder="Enter Designation"
+                              placeholder="Enter contact's designation"
                             />
                           </div>
                         </div>
                       </div>
-                      <div className="mb-3">
-                        <label
-                          htmlFor="registrationNumber"
-                          className="form-label registration-form-label"
-                        >
-                          Registration number
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control registration-input-control"
-                          id="registrationNumber"
-                          name="registrationNumber"
-                          placeholder="Enter Reg. no"
-                        />
+
+                      {/* New row for Registration Number and Password */}
+                      <div className="row">
+                        {/* Registration Number */}
+                        <div className="col">
+                          <div className="mb-3">
+                            <label
+                              htmlFor="registrationNumber"
+                              className="form-label registration-form-label"
+                            >
+                              Registration Number
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control registration-input-control"
+                              id="registrationNumber"
+                              name="registrationNumber"
+                              placeholder="Enter Reg. no"
+                            />
+                          </div>
+                        </div>
+                        {/* Password */}
+                        <div className="col">
+                          <div className="mb-3">
+                            <label
+                              htmlFor="password"
+                              className="form-label registration-form-label"
+                            >
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              className="form-control registration-input-control"
+                              id="password"
+                              name="password"
+                              placeholder="Enter Password"
+                            />
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                      <button type="button" className="btn btn-primary">
-                        Submit
-                      </button>
-                    </div>
-                    <div className="mt-1 text-center">
-                      <span className="registration-footer-container">
-                        Already have an account?{" "}
-                      </span>
-                      <span className="registration-footer-container login-redirect">
-                        <Link className="text-decoration-none" to={"/"}>
-                          Login
-                        </Link>
-                      </span>
+
+                      {/* Submit button and footer */}
+                      <div className="d-grid gap-2 col-6 mx-auto mt-4">
+                        <button type="button" className="btn btn-primary">
+                          Submit
+                        </button>
+                      </div>
+                      <div className="mt-1 text-center">
+                        <span className="registration-footer-container">
+                          Already have an account?{" "}
+                        </span>
+                        <span className="registration-footer-container login-redirect">
+                          <Link className="text-decoration-none" to={"/"}>
+                            Login
+                          </Link>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
