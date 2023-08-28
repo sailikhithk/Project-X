@@ -1,13 +1,18 @@
 REGISTER_SCHEMA = {
     "type": "object",
     "properties": {
-        "username": {"type": "string"},
-        "password": {"type": "string"},
+        "institution_name": {"type": "string"},
+        "name": {"type": "string"},
         "email": {"type": "string", "format": "email"},
-        "institution": {"type": "string"},
-        "role": {"type": "string", "enum": ["Admin", "Teacher", "Student"]},
+        "phone_number": {"type": "string"},
+        "country": {"type": "string"},
+        "city": {"type": "string"},
+        "desiganation": {"type": "string"},
+        "preference": {"type": "string"},
+        "timing": {"type": "string"},
+        "password": {"type": "string"},        
     },
-    "required": ["username", "password", "email", "institution", "role"],
+    "required": ["institution_name", "name", "email", "phone_number", "country", "city", "desiganation", "preference", "timing", "password"],
 }
 
 LOGIN_SCHEMA = {
