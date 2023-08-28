@@ -1,17 +1,14 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FormComponent from './components/FormComponent.jsx';
-import InstituteLogin from './components/InstituteLogin.js';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Registration from "./components/Registration";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route index element={<FormComponent />} path="/" />
-        <Route element={<InstituteLogin />} path="/institute-login" />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
+    </Routes>
   );
 };
 

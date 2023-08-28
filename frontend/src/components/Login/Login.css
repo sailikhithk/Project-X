@@ -1,0 +1,37 @@
+.login-header {
+  color: #1d1d1f;
+  margin-top: 2rem;
+}
+
+.login-sub-header {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.login-form-container {
+  margin-top: 3rem;
+}
+
+.login-form-label {
+  color: #1d1d1f;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.login-input-control {
+  padding: 0.75rem;
+}
+
+.login-footer-container {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.login-join-us {
+  color: #5e74f7;
+  font-size: 0.9rem;
+}
+
+.login-image-container {
+  height: 100%;
+}

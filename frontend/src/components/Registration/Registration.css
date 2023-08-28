@@ -1,0 +1,22 @@
+.registration-header {
+  color: #1d1d1f;
+}
+
+.registration-sub-header {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.registration-form-container {
+  margin-top: 1rem;
+}
+
+.registration-footer-container {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.login-redirect {
+  color: #5e74f7;
+  font-size: 0.9rem;
+}
