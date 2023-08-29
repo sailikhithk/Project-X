@@ -19,6 +19,26 @@ const Login = () => {
     }
   };
 
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ universityId, password }),
+      });
+
+      if (response.status === 200) {
+        console.log("Login successful");
+      } else {
+        console.log("Login failed");
+      }
+    } catch (error) {
+      console.log("There was an error sending the data", error);
+    }
+  };
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <div className="container">
@@ -48,7 +68,7 @@ const Login = () => {
                           name="universityId"
                           placeholder="UNIV01UB"
                           value={universityId}
-                          onChange={(e) => loginInputHandler(e)}
+                          onChange={loginInputHandler}
                         />
                       </div>
                       <div className="mb-3">
@@ -65,12 +85,12 @@ const Login = () => {
                           name="password"
                           placeholder="********"
                           value={password}
-                          onChange={(e) => loginInputHandler(e)}
+                          onChange={loginInputHandler}
                         />
                       </div>
                     </div>
                     <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                      <button type="button" className="btn btn-primary">
+                      <button type="button" className="btn btn-primary" onClick={handleSubmit}>
                         Login
                       </button>
                     </div>

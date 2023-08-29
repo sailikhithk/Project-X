@@ -9,7 +9,7 @@ from datetime import timedelta
 
 # Registering the blueprints after initializing the app
 from routes.user import user as user_router
-from routes.case_master import case_master as case_master_router
+# from routes.case_master import case_master as case_master_router
 from flask_jwt_extended import JWTManager
 
 from database import Base, engine
@@ -31,8 +31,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Registering the blueprints
-app.register_blueprint(user_router, url_prefix="/auth")
-app.register_blueprint(case_master_router, url_prefix="/case_master")
+# app.register_blueprint(user_router, url_prefix="/auth")
+# app.register_blueprint(case_master_router, url_prefix="/case_master")
+app.register_blueprint(user_router, url_prefix="/user")
 
 @app.before_request
 def before_request():
@@ -72,15 +73,15 @@ def after_request(response):
     return response
 
 if __name__ == "__main__":
-    from models.role_model import Role
-    from models.user_model import User
-    from models.case_master import CaseMaster
+    # from models.role import Role
+    from models.user_master import UserMaster
+    # from models.case_master import CaseMaster
 
     Base.metadata.create_all(engine)
 
-    from create_db import (
-        create_dummy_roles,
-    )
+    # from create_db import (
+    #     create_dummy_roles,
+    # )
 
-    create_dummy_roles()
+    # create_dummy_roles()
     app.run(debug=True)
