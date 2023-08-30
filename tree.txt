@@ -1,5 +1,4 @@
 .
-├── Answers.md
 ├── InterviewPractice
 │   ├── Home.jpeg
 │   ├── Media Player.jpeg
@@ -62,10 +61,11 @@
 │   ├── create_db.py
 │   ├── database.py
 │   ├── models
+│   │   ├── Institution_master.py
 │   │   ├── __init__.py
 │   │   ├── case_master.py
-│   │   ├── role_model.py
-│   │   └── user_model.py
+│   │   ├── role.py
+│   │   └── user_master.py
 │   ├── requirements.txt
 │   ├── routes
 │   │   ├── __init__.py
@@ -77,9 +77,6 @@
 │   │   └── user_service.py
 │   ├── utils.py
 │   └── validation.py
-├── emotionDetection.py
-├── emotionDetector.py
-├── emotionDetector_working.py
 ├── frontend
 │   ├── README.md
 │   ├── package-lock.json
@@ -92,31 +89,49 @@
 │   │   ├── manifest.json
 │   │   └── robots.txt
 │   └── src
-│       ├── App.css
 │       ├── App.js
-│       ├── App.test.js
-│       ├── Dashboard.css
-│       ├── Dashboard.js
-│       ├── InterviewPractice
-│       │   ├── Home.jsx
-│       │   ├── MediaPlayer.jsx
-│       │   ├── Profile.jsx
-│       │   ├── Search.jsx
-│       │   ├── SearchResults.jsx
-│       │   └── Signup.jsx
+│       ├── assets
 │       ├── components
-│       │   ├── Dropdown.css
-│       │   ├── Dropdown.jsx
-│       │   ├── Form.jsx
-│       │   ├── FormComponent.css
-│       │   ├── FormComponent.jsx
-│       │   ├── InputField.css
-│       │   ├── InputField.jsx
-│       │   └── InstituteLogin.js
+│       │   ├── Dashboard
+│       │   │   ├── Dashboard.js
+│       │   │   └── package.json
+│       │   ├── Login
+│       │   │   ├── Login.css
+│       │   │   ├── Login.js
+│       │   │   └── package.json
+│       │   ├── Registration
+│       │   │   ├── Registration.css
+│       │   │   ├── Registration.js
+│       │   │   └── package.json
+│       │   ├── Sidebar
+│       │   │   ├── Sidebar.js
+│       │   │   ├── SidebarItem.js
+│       │   │   └── SidebarItemCollapse.js
+│       │   ├── StudentInfo
+│       │   │   ├── StudentInfo.js
+│       │   │   └── package.json
+│       │   └── TeacherInfo
+│       │       ├── TeacherInfo.js
+│       │       └── package.json
+│       ├── images
+│       │   └── login.jpg
 │       ├── index.css
 │       ├── index.js
-│       ├── logo.svg
+│       ├── layout
+│       │   ├── MainLayout.js
+│       │   └── PageWrapper.js
+│       ├── pages
+│       │   └── UserManagementPageLayout
+│       │       ├── UserManagementPageLayout.js
+│       │       └── package.json
+│       ├── redux
+│       │   ├── features
+│       │   │   └── appStateSlice.js
+│       │   └── store.js
 │       ├── reportWebVitals.js
+│       ├── routes
+│       │   ├── appRoutes.js
+│       │   └── index.js
 │       └── setupTests.js
 ├── input
 │   ├── data
@@ -142,4 +157,4 @@
 ├── requirements.txt
 └── tree.txt
 
-18 directories, 125 files
+31 directories, 127 files

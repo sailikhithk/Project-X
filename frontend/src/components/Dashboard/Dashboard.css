@@ -1,0 +1,20 @@
+.card {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+  }
+  
