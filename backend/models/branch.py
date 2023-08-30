@@ -5,10 +5,10 @@ from database import Base
 from sqlalchemy.orm import relationship, backref
 
 
-class Role(Base):
-    __tablename__ = "role"
+class Branch(Base):
+    __tablename__ = "branch"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(64), unique=True)  # The role name e.g. "admin", "student"
+    name = Column(String(100), unique=True)
     created_date = Column(DateTime, default=func.now(), nullable=False)
     updated_date = Column(DateTime, default=func.now(), onupdate=func.now(), nullable=False)
