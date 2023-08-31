@@ -3,8 +3,8 @@ import appStateSlice from "./features/appStateSlice";
 
 const store = configureStore({
   reducer: {
-    appState: appStateSlice
-  }
+    appState: appStateSlice,
+  },
 });
 
 export default store;

@@ -12,12 +12,11 @@ const SidebarItem = ({ item }) => {
       sx={{
         backgroundColor: appState === item.state ? "#F9F9F9" : "unset",
         paddingY: "12px",
-        paddingX: "24px",
       }}
     >
       <ListItemIcon
         sx={{
-          color: "#eeeeee",
+          color: "#00B2FF",
         }}
       >
         {item.sidebarProps.icon && item.sidebarProps.icon}

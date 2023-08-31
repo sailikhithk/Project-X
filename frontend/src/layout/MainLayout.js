@@ -2,15 +2,16 @@ import { Outlet } from "react-router-dom";
 import { Box, Toolbar } from "@mui/material";
 
 import Sidebar from "../components/Sidebar/Sidebar";
+import AppHeader from "../components/AppHeader";
 
 const MainLayout = () => {
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <div>APP HEADER</div> */}
+      <AppHeader />
       <Box
         component="nav"
         sx={{
-          width: "300px",
+          width: "270px",
           flexShrink: 0,
         }}
       >
@@ -21,7 +22,7 @@ const MainLayout = () => {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: `calc(100% - 300px)`,
+          width: `calc(100% - 270px)`,
           minHeight: "100vh",
           backgroundColor: "#FDFAF5",
         }}

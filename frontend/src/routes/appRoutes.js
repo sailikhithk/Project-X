@@ -4,6 +4,8 @@ import Dashboard from "../components/Dashboard";
 import TeacherInfo from "../components/TeacherInfo";
 import StudentInfo from "../components/StudentInfo";
 
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
+
 const appRoutes = [
   {
     path: "/dashboard",
@@ -11,6 +13,7 @@ const appRoutes = [
     state: "dashboard",
     sidebarProps: {
       displayText: "Dashboard",
+      icon: <DashboardOutlinedIcon />,
     },
   },
   {
@@ -19,6 +22,7 @@ const appRoutes = [
     state: "user",
     sidebarProps: {
       displayText: "User Management",
+      icon: <DashboardOutlinedIcon />,
     },
     child: [
       {

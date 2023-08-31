@@ -31,12 +31,11 @@ const SidebarItemCollapse = ({ item }) => {
         onClick={() => setOpen(!open)}
         sx={{
           paddingY: "12px",
-          paddingX: "24px",
         }}
       >
         <ListItemIcon
           sx={{
-            color: "#eeeeee",
+            color: "#00B2FF",
           }}
         >
           {item.sidebarProps.icon && item.sidebarProps.icon}
