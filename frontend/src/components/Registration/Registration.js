@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { post } from "../../http/http";
+
 import "./Registration.css";
 
 const Registration = () => {
@@ -27,14 +30,11 @@ const Registration = () => {
   };
 
   const handleSubmit = async () => {
+    const url = "/registration";
+    const payload = formData;
+
     try {
-      const response = await fetch("/registration", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await post(url, payload);
 
       if (response.status === 200) {
         console.log("Registration successful");
@@ -57,13 +57,18 @@ const Registration = () => {
                   <div>
                     <h2 className="registration-header">Create Institution</h2>
                     <p className="registration-sub-header">
-                      Kick start your journey to get access to our expert insights about your students across departments, branches, and cities today!
+                      Kick start your journey to get access to our expert
+                      insights about your students across departments, branches,
+                      and cities today!
                     </p>
                     <div className="registration-form-container">
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="institutionName" className="form-label registration-form-label">
+                            <label
+                              htmlFor="institutionName"
+                              className="form-label registration-form-label"
+                            >
                               Institution Name
                             </label>
                             <input
@@ -79,7 +84,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="contactName" className="form-label registration-form-label">
+                            <label
+                              htmlFor="contactName"
+                              className="form-label registration-form-label"
+                            >
                               Contact Name
                             </label>
                             <input
@@ -97,7 +105,10 @@ const Registration = () => {
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="contactEmailAddress" className="form-label registration-form-label">
+                            <label
+                              htmlFor="contactEmailAddress"
+                              className="form-label registration-form-label"
+                            >
                               Contact Email Address
                             </label>
                             <input
@@ -113,7 +124,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="contactPhoneNumber" className="form-label registration-form-label">
+                            <label
+                              htmlFor="contactPhoneNumber"
+                              className="form-label registration-form-label"
+                            >
                               Contact Phone Number
                             </label>
                             <input
@@ -131,7 +145,10 @@ const Registration = () => {
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="numberOfStudents" className="form-label registration-form-label">
+                            <label
+                              htmlFor="numberOfStudents"
+                              className="form-label registration-form-label"
+                            >
                               Number of Students
                             </label>
                             <input
@@ -147,7 +164,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="institutionPOC" className="form-label registration-form-label">
+                            <label
+                              htmlFor="institutionPOC"
+                              className="form-label registration-form-label"
+                            >
                               Institution POC (Point Of Contact)
                             </label>
                             <input
@@ -165,7 +185,10 @@ const Registration = () => {
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="numberOfDepartments" className="form-label registration-form-label">
+                            <label
+                              htmlFor="numberOfDepartments"
+                              className="form-label registration-form-label"
+                            >
                               Number of Departments
                             </label>
                             <input
@@ -181,7 +204,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="country" className="form-label registration-form-label">
+                            <label
+                              htmlFor="country"
+                              className="form-label registration-form-label"
+                            >
                               Country
                             </label>
                             <input
@@ -199,7 +225,10 @@ const Registration = () => {
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="city" className="form-label registration-form-label">
+                            <label
+                              htmlFor="city"
+                              className="form-label registration-form-label"
+                            >
                               City
                             </label>
                             <input
@@ -215,7 +244,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="contactDesignation" className="form-label registration-form-label">
+                            <label
+                              htmlFor="contactDesignation"
+                              className="form-label registration-form-label"
+                            >
                               Contact's Designation
                             </label>
                             <input
@@ -233,7 +265,10 @@ const Registration = () => {
                       <div className="row">
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="registrationNumber" className="form-label registration-form-label">
+                            <label
+                              htmlFor="registrationNumber"
+                              className="form-label registration-form-label"
+                            >
                               Registration Number
                             </label>
                             <input
@@ -249,7 +284,10 @@ const Registration = () => {
                         </div>
                         <div className="col">
                           <div className="mb-3">
-                            <label htmlFor="password" className="form-label registration-form-label">
+                            <label
+                              htmlFor="password"
+                              className="form-label registration-form-label"
+                            >
                               Password
                             </label>
                             <input
@@ -265,7 +303,11 @@ const Registration = () => {
                         </div>
                       </div>
                       <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                        <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                        <button
+                          type="button"
+                          className="btn btn-primary"
+                          onClick={handleSubmit}
+                        >
                           Submit
                         </button>
                       </div>

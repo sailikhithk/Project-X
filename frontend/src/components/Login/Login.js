@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import { post } from "../../http/http";
 
 import LoginImage from "../../images/login.jpg";
 import "./Login.css";
@@ -8,6 +11,8 @@ const Login = () => {
   // states
   const [universityId, setUniversityId] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   // utils
   const loginInputHandler = (e) => {
@@ -20,17 +25,15 @@ const Login = () => {
   };
 
   const handleSubmit = async () => {
+    const url = "/login";
+    const payload = { universityId, password };
+
     try {
-      const response = await fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ universityId, password }),
-      });
+      const response = await post(url, payload);
 
       if (response.status === 200) {
         console.log("Login successful");
+        navigate("/dashboard", { replace: true });
       } else {
         console.log("Login failed");
       }
@@ -90,7 +93,11 @@ const Login = () => {
                       </div>
                     </div>
                     <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                      <button type="button" className="btn btn-primary" onClick={handleSubmit}>
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={handleSubmit}
+                      >
                         Login
                       </button>
                     </div>
