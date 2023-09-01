@@ -1,7 +1,123 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const StudentInfo = () => {
-  return <div>StudentInfo</div>;
+  return (
+    <div className="body flex-grow-1 px-3">
+      <div className="container-lg">
+        <div className="row">
+          <div className="col-sm-6 col-lg-6 mt-3">
+            <div className="card bg-light mb-3">
+              <div className="card-header bg-light pb-2 d-flex justify-content-between align-items-center">
+                <div className="fs-5 fw-semibold mt-2 mb-2">
+                  <span className="fw-bolder">Students</span>
+                </div>
+                <div className="fs-5 mt-2 mb-2">
+                  <Link className="btn btn-primary">View All</Link>
+                </div>
+              </div>
+              <div className="card-body pb-0">
+                <div className="d-flex justify-content-between align-items-start">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal"># of Students</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal"> 10</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Status</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">Active</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Bank</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">Fauget Bank</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Balance</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">$4000.25</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2 mb-4">
+                  <div className="d-grid gap-2 col-6 mx-auto mt-4">
+                    <button type="button" className="btn btn-primary">
+                      Add Students
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 col-lg-6 mt-3">
+            <div className="card bg-light mb-3">
+              <div className="card-header bg-light pb-2 d-flex justify-content-between align-items-center">
+                <div className="fs-5 fw-semibold mt-2 mb-2">
+                  <span className="fw-bolder">Teachers</span>
+                </div>
+                <div className="fs-5 mt-2 mb-2">
+                  <Link className="btn btn-primary stretched-link">
+                    View All
+                  </Link>
+                </div>
+              </div>
+              <div className="card-body pb-0">
+                <div className="d-flex justify-content-between align-items-start">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal"># of Teachers</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">10</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Status</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">Active</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Bank</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">Fauget Bank</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2">
+                  <div className="fs-5 fw-normal mt-2">
+                    <span className="fw-normal">Balance</span>
+                  </div>
+                  <div className="fs-5 fw-semibold mt-2">
+                    <span className="fw-normal">$4000.25</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-start mt-2 mb-4">
+                  <div className="d-grid gap-2 col-6 mx-auto mt-4">
+                    <button type="button" className="btn btn-primary">
+                      Add Teachers
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default StudentInfo;
