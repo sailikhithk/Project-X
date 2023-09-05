@@ -1,8 +1,11 @@
 import UserManagementPageLayout from "../pages/UserManagementPageLayout";
 
 import Dashboard from "../components/Dashboard";
-import TeacherInfo from "../components/TeacherInfo";
-import StudentInfo from "../components/StudentInfo";
+import Summary from "../components/Summary";
+import AddTeachers from "../components/AddTeachers";
+import Teachers from "../components/Teachers";
+import AddStudents from "../components/AddStudents";
+import Students from "../components/Students";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 
@@ -26,19 +29,37 @@ const appRoutes = [
     },
     child: [
       {
-        path: "/user/teacher",
-        element: <TeacherInfo />,
-        state: "user.teacher",
+        path: "/user/summary",
+        element: <Summary />,
+        state: "user.summary",
         sidebarProps: {
-          displayText: "Teacher",
+          displayText: "Summary",
         },
       },
       {
-        path: "/user/student",
-        element: <StudentInfo />,
-        state: "user.student",
+        path: "/user/add-teacher",
+        element: <AddTeachers />,
+        state: "user.addTeacher",
+      },
+      {
+        path: "/user/teachers",
+        element: <Teachers />,
+        state: "user.teachers",
         sidebarProps: {
-          displayText: "Student",
+          displayText: "View Teachers",
+        },
+      },
+      {
+        path: "/user/add-student",
+        element: <AddStudents />,
+        state: "user.addTeacher",
+      },
+      {
+        path: "/user/students",
+        element: <Students />,
+        state: "user.students",
+        sidebarProps: {
+          displayText: "View Students",
         },
       },
     ],

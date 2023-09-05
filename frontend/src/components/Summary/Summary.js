@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
-const StudentInfo = () => {
+const Summary = () => {
+  // navigation
+  const navigate = useNavigate();
+
   return (
     <div className="body flex-grow-1 px-3">
       <div className="container-lg">
@@ -13,45 +16,43 @@ const StudentInfo = () => {
                   <span className="fw-bolder">Students</span>
                 </div>
                 <div className="fs-5 mt-2 mb-2">
-                  <Link className="btn btn-primary">View All</Link>
+                  <Link to={"/user/students"} className="btn btn-primary">
+                    View All
+                  </Link>
                 </div>
               </div>
               <div className="card-body pb-0">
                 <div className="d-flex justify-content-between align-items-start">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal"># of Students</span>
+                    <span className="fw-normal">Number of Students</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal"> 10</span>
+                    <span className="fw-normal"> 360</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Status</span>
+                    <span className="fw-normal">Number of Departments</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">Active</span>
+                    <span className="fw-normal">4</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Bank</span>
+                    <span className="fw-normal">Number of Branches</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">Fauget Bank</span>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-between align-items-start mt-2">
-                  <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Balance</span>
-                  </div>
-                  <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">$4000.25</span>
+                    <span className="fw-normal">3</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2 mb-4">
                   <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => navigate("/user/add-student")}
+                    >
                       Add Students
                     </button>
                   </div>
@@ -66,7 +67,10 @@ const StudentInfo = () => {
                   <span className="fw-bolder">Teachers</span>
                 </div>
                 <div className="fs-5 mt-2 mb-2">
-                  <Link className="btn btn-primary stretched-link">
+                  <Link
+                    to={"/user/teachers"}
+                    className="btn btn-primary"
+                  >
                     View All
                   </Link>
                 </div>
@@ -74,39 +78,35 @@ const StudentInfo = () => {
               <div className="card-body pb-0">
                 <div className="d-flex justify-content-between align-items-start">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal"># of Teachers</span>
+                    <span className="fw-normal">Number of Teachers</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">10</span>
+                    <span className="fw-normal">3</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Status</span>
+                    <span className="fw-normal">Number of Departments</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">Active</span>
+                    <span className="fw-normal">4</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2">
                   <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Bank</span>
+                    <span className="fw-normal">Number of Branches</span>
                   </div>
                   <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">Fauget Bank</span>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-between align-items-start mt-2">
-                  <div className="fs-5 fw-normal mt-2">
-                    <span className="fw-normal">Balance</span>
-                  </div>
-                  <div className="fs-5 fw-semibold mt-2">
-                    <span className="fw-normal">$4000.25</span>
+                    <span className="fw-normal">3</span>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-start mt-2 mb-4">
                   <div className="d-grid gap-2 col-6 mx-auto mt-4">
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => navigate("/user/add-teacher")}
+                    >
                       Add Teachers
                     </button>
                   </div>
@@ -120,4 +120,4 @@ const StudentInfo = () => {
   );
 };
 
-export default StudentInfo;
+export default Summary;
