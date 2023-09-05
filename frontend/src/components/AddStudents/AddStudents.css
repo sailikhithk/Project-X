@@ -1,0 +1,45 @@
+.FileUploadContent-root {
+  width: 55vw;
+  max-width: 70rem;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 20px;
+}
+.FileUploadGrid-item {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+.FileUpload-upload {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+.FileUpload-upload.FileUpload-upload-drag {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  background: #fafafa;
+  cursor: pointer;
+}
+.FileUpload-upload-btn {
+  width: 100%;
+  outline: none;
+}
+.FileUpload-upload.FileUpload-upload-drag .FileUpload-upload {
+  padding: 16px 0;
+}
+.FileUpload-upload.FileUpload-upload-drag .FileUpload-upload-btn {
+  display: table;
+  height: 100%;
+}
+.FileUpload-upload.FileUpload-upload-drag .FileUpload-upload-drag-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+.FileUpload-upload.FileUpload-upload-drag p.FileUpload-upload-drag-icon {
+  margin-bottom: 20px;
+}
