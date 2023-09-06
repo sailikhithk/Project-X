@@ -7,6 +7,14 @@ const AddStudents = () => {
   // ref
   const input = useRef(null);
 
+  // utils
+  const handleSelectFiles = (e) => {
+    const files = [...e.target.files];
+    if (files && files.length) {
+      console.log("files :", files);
+    }
+  };
+
   return (
     <div className="body flex-grow-1 px-3">
       <div className="container-lg">
@@ -36,13 +44,16 @@ const AddStudents = () => {
             <div className="d-flex justify-content-between align-items-start">
               <div className="FileUploadContent-root">
                 <div className="FileUploadGrid-item">
-                  <div className="FileUpload-upload FileUpload-upload-drag">
+                  <div
+                    className="FileUpload-upload FileUpload-upload-drag"
+                    onClick={() => input && input.current.click()}
+                  >
                     <input
                       ref={input}
                       type="file"
                       style={{ display: "none" }}
                       accept=".csv"
-                      onChange={() => {}}
+                      onChange={() => handleSelectFiles()}
                       onClick={(e) => {
                         e.target.value = null;
                       }}
