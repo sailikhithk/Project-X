@@ -40,7 +40,7 @@ const AddStudents = () => {
               </span>
             </div>
           </div>
-          <div className="col-lg-12 mt-4">
+          <div className="col-md-12 mt-4">
             <div className="d-flex justify-content-between align-items-start">
               <div className="FileUploadContent-root">
                 <div className="FileUploadGrid-item">
