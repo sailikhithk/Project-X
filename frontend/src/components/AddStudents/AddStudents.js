@@ -52,8 +52,8 @@ const AddStudents = () => {
                       ref={input}
                       type="file"
                       style={{ display: "none" }}
-                      accept=".csv"
-                      onChange={() => handleSelectFiles()}
+                      accept={[".csv", ".xlsx"]}
+                      onChange={(e) => handleSelectFiles(e)}
                       onClick={(e) => {
                         e.target.value = null;
                       }}
@@ -70,7 +70,6 @@ const AddStudents = () => {
                             />
                           </p>
                           <p>Select a CSV or Excel file to import</p>
-                          <p>or drag and drop it here</p>
                         </div>
                       </div>
                     </span>
