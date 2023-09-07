@@ -26,19 +26,5 @@
     "resizable": true,
     "sortable": true,
     "flex": 1
-  },
-  {
-    "field": "numberOfInterviews",
-    "headerName": "# of Interviews",
-    "resizable": true,
-    "sortable": true,
-    "flex": 1
-  },
-  {
-    "field": "averageScore",
-    "headerName": "Avg Score",
-    "resizable": true,
-    "sortable": true,
-    "flex": 1
   }
 ]
