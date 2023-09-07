@@ -23,3 +23,13 @@ body {
   color: #666;
   opacity: 0.5;
 }
+
+.ag-cell-focus,
+.ag-cell-no-focus {
+  border: none !important;
+}
+/* This CSS is to not apply the border for the column having 'no-border' class */
+.no-border.ag-cell:focus {
+  border: none !important;
+  outline: none;
+}

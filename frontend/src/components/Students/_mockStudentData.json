@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "serialNumber": 1,
     "name": "Student A",
     "department": "HR",
@@ -8,6 +9,7 @@
     "averageScore": 80
   },
   {
+    "id": 2,
     "serialNumber": 2,
     "name": "Student B",
     "department": "Admin",
@@ -16,6 +18,7 @@
     "averageScore": 60
   },
   {
+    "id": 3,
     "serialNumber": 3,
     "name": "Student C",
     "department": "HR",
@@ -24,6 +27,7 @@
     "averageScore": 75
   },
   {
+    "id": 4,
     "serialNumber": 4,
     "name": "Student D",
     "department": "HR",
@@ -32,6 +36,7 @@
     "averageScore": 80
   },
   {
+    "id": 5,
     "serialNumber": 5,
     "name": "Student E",
     "department": "HR",

@@ -11,6 +11,7 @@
     "headerName": "Name",
     "resizable": true,
     "sortable": true,
+    "editable": true,
     "flex": 1
   },
   {
@@ -18,6 +19,7 @@
     "headerName": "Department",
     "resizable": true,
     "sortable": true,
+    "editable": true,
     "flex": 1
   },
   {
@@ -25,6 +27,7 @@
     "headerName": "Branch",
     "resizable": true,
     "sortable": true,
+    "editable": true,
     "flex": 1
   },
   {
@@ -32,6 +35,7 @@
     "headerName": "# of Interviews",
     "resizable": true,
     "sortable": true,
+    "editable": true,
     "flex": 1
   },
   {
@@ -39,6 +43,7 @@
     "headerName": "Avg Score",
     "resizable": true,
     "sortable": true,
+    "editable": true,
     "flex": 1
   }
 ]
