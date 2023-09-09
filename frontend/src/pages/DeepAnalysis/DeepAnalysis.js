@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const UserManagementPageLayout = () => {
+const DeepAnalysis = () => {
   return (
     <>
       <Outlet />
@@ -8,4 +8,4 @@ const UserManagementPageLayout = () => {
   );
 };
 
-export default UserManagementPageLayout;
+export default DeepAnalysis;

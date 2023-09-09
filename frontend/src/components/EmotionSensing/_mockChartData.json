@@ -1,0 +1,72 @@
+[
+  {
+    "name": "0",
+    "surprise": 50,
+    "disgust": 48,
+    "contempt": 31,
+    "happiness": 20,
+    "sadnesss": 0,
+    "anger": 39,
+    "fear": 86
+  },
+  {
+    "name": "1",
+    "surprise": 64,
+    "disgust": 10,
+    "contempt": 2,
+    "happiness": 11,
+    "sadnesss": 69,
+    "anger": 85,
+    "fear": 78
+  },
+  {
+    "name": "2",
+    "surprise": 49,
+    "disgust": 84,
+    "contempt": 73,
+    "happiness": 93,
+    "sadnesss": 75,
+    "anger": 30,
+    "fear": 79
+  },
+  {
+    "name": "3",
+    "surprise": 56,
+    "disgust": 97,
+    "contempt": 36,
+    "happiness": 30,
+    "sadnesss": 54,
+    "anger": 50,
+    "fear": 25
+  },
+  {
+    "name": "4",
+    "surprise": 71,
+    "disgust": 90,
+    "contempt": 14,
+    "happiness": 13,
+    "sadnesss": 53,
+    "anger": 5,
+    "fear": 85
+  },
+  {
+    "name": "5",
+    "surprise": 24,
+    "disgust": 58,
+    "contempt": 74,
+    "happiness": 66,
+    "sadnesss": 54,
+    "anger": 79,
+    "fear": 83
+  },
+  {
+    "name": "6",
+    "surprise": 59,
+    "disgust": 16,
+    "contempt": 77,
+    "happiness": 41,
+    "sadnesss": 35,
+    "anger": 54,
+    "fear": 45
+  }
+]

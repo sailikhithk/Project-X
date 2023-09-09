@@ -1,4 +1,5 @@
-import UserManagementPageLayout from "../pages/UserManagementPageLayout";
+import UserManagement from "../pages/UserManagement";
+import DeepAnalysis from "../pages/DeepAnalysis";
 
 import Dashboard from "../components/Dashboard";
 import Summary from "../components/Summary";
@@ -6,6 +7,7 @@ import AddTeachers from "../components/AddTeachers";
 import Teachers from "../components/Teachers";
 import AddStudents from "../components/AddStudents";
 import Students from "../components/Students";
+import EmotionSensing from "../components/EmotionSensing";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 
@@ -20,8 +22,27 @@ const appRoutes = [
     },
   },
   {
+    path: "/deep-analysis",
+    element: <DeepAnalysis />,
+    state: "deepAnalysis",
+    sidebarProps: {
+      displayText: "Deep Analysis",
+      icon: <DashboardOutlinedIcon />,
+    },
+    child: [
+      {
+        path: "/deep-analysis/emotion-sensing",
+        element: <EmotionSensing />,
+        state: "deepAnalysis.emotionSensing",
+        sidebarProps: {
+          displayText: "Emotion Sensing",
+        },
+      },
+    ],
+  },
+  {
     path: "/user",
-    element: <UserManagementPageLayout />,
+    element: <UserManagement />,
     state: "user",
     sidebarProps: {
       displayText: "User Management",
