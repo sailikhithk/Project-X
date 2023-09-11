@@ -7,7 +7,11 @@ import AddTeachers from "../components/AddTeachers";
 import Teachers from "../components/Teachers";
 import AddStudents from "../components/AddStudents";
 import Students from "../components/Students";
+import BehavioralAnalysis from "../components/BehavioralAnalysis";
+import KSAnalysis from "../components/KSAnalysis";
+import PracticalThinkingA from "../components/PracticalThinkingA";
 import EmotionSensing from "../components/EmotionSensing";
+import HardSkillSoftSkills from "../components/HardSkillSoftSkills";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 
@@ -31,11 +35,43 @@ const appRoutes = [
     },
     child: [
       {
+        path: "/deep-analysis/behavioral-analysis",
+        element: <BehavioralAnalysis />,
+        state: "deepAnalysis.behavioralAnalysis",
+        sidebarProps: {
+          displayText: "Behavioral Analysis",
+        },
+      },
+      {
+        path: "/deep-analysis/ks-analysis",
+        element: <KSAnalysis />,
+        state: "deepAnalysis.ksAnalysis",
+        sidebarProps: {
+          displayText: "KS Analysis",
+        },
+      },
+      {
+        path: "/deep-analysis/practical-thinking-a",
+        element: <PracticalThinkingA />,
+        state: "deepAnalysis.practicalThinkingA",
+        sidebarProps: {
+          displayText: "Practical thinking A",
+        },
+      },
+      {
         path: "/deep-analysis/emotion-sensing",
         element: <EmotionSensing />,
         state: "deepAnalysis.emotionSensing",
         sidebarProps: {
           displayText: "Emotion Sensing",
+        },
+      },
+      {
+        path: "/deep-analysis/hard-skill-soft-skills",
+        element: <HardSkillSoftSkills />,
+        state: "deepAnalysis.hardSkillSoftSkills",
+        sidebarProps: {
+          displayText: "Hard Skill vs Soft skills",
         },
       },
     ],
