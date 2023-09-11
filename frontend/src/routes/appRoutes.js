@@ -136,7 +136,7 @@ const appRoutes = [
       {
         path: "/account/overview",
         element: <Overview />,
-        state: "user.overview",
+        state: "account.overview",
         sidebarProps: {
           displayText: "Overview",
         },
@@ -144,7 +144,7 @@ const appRoutes = [
       {
         path: "/account/settings",
         element: <Settings />,
-        state: "user.settings",
+        state: "account.settings",
         sidebarProps: {
           displayText: "Settings",
         },

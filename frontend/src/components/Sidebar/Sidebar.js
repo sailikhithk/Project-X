@@ -1,10 +1,16 @@
 import { Drawer, List, Stack, Toolbar } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import appRoutes from "../../routes/appRoutes";
 import SidebarItem from "./SidebarItem";
 import SidebarItemCollapse from "./SidebarItemCollapse";
 
+import LogoImage from "../../images/login.jpg";
+
 const Sidebar = () => {
+  // navigation
+  const navigate = useNavigate();
+
   return (
     <Drawer
       variant="permanent"
@@ -21,9 +27,20 @@ const Sidebar = () => {
       }}
     >
       <List disablePadding>
-        <Toolbar sx={{ marginBottom: "20px" }}>
+        <Toolbar style={{ borderBottom: "thin solid #E8E8E8" }}>
           <Stack sx={{ width: "100%" }} direction="row" justifyContent="center">
-            <div>LOGO</div>
+            <span onClick={() => navigate("/dashboard", { replace: true })}>
+              <img
+                src={LogoImage}
+                className="img-fluid"
+                style={{
+                  height: "45px",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
+                alt="Logo"
+              />
+            </span>
           </Stack>
         </Toolbar>
         {appRoutes.map((route, index) =>
