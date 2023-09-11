@@ -1,5 +1,6 @@
 import UserManagement from "../pages/UserManagement";
 import DeepAnalysis from "../pages/DeepAnalysis";
+import Account from "../pages/Account";
 
 import Dashboard from "../components/Dashboard";
 import Summary from "../components/Summary";
@@ -12,6 +13,8 @@ import KSAnalysis from "../components/KSAnalysis";
 import PracticalThinkingA from "../components/PracticalThinkingA";
 import EmotionSensing from "../components/EmotionSensing";
 import HardSkillSoftSkills from "../components/HardSkillSoftSkills";
+import Overview from "../components/Overview";
+import Settings from "../components/Settings";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 
@@ -117,6 +120,33 @@ const appRoutes = [
         state: "user.students",
         sidebarProps: {
           displayText: "View Students",
+        },
+      },
+    ],
+  },
+  {
+    path: "/account",
+    element: <Account />,
+    state: "account",
+    sidebarProps: {
+      displayText: "Account",
+      icon: <DashboardOutlinedIcon />,
+    },
+    child: [
+      {
+        path: "/account/overview",
+        element: <Overview />,
+        state: "user.overview",
+        sidebarProps: {
+          displayText: "Overview",
+        },
+      },
+      {
+        path: "/account/settings",
+        element: <Settings />,
+        state: "user.settings",
+        sidebarProps: {
+          displayText: "Settings",
         },
       },
     ],
