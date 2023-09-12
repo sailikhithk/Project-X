@@ -14,9 +14,7 @@ import {
   Cell,
   ResponsiveContainer,
 } from "recharts";
-
 import CardContainer from "../CardContainer";
-
 import _mockCardLists from "./_mockCardLists.json";
 import _mockChartData from "./_mockChartData.json";
 
@@ -27,12 +25,33 @@ const Dashboard = () => {
     <div className="body flex-grow-1 px-3">
       <div className="container-lg">
         <div className="row">
-          {/** card section */}
+          {/* Card section */}
           {_mockCardLists.length ? (
             <CardContainer cardLists={_mockCardLists} />
           ) : null}
-          {/** chart section */}
-          <div className="col-sm-6 col-lg-4">
+          {/* Average Interview Score Card */}
+          <div className="col-6">
+            <div className="card bg-white mb-3">
+              <div className="card-body">
+                <span className="fs-6 fw-normal">
+                  Average Interview Score: {/* Your Value Here */}
+                </span>
+              </div>
+            </div>
+          </div>
+          {/* Skill Gap Rate Card */}
+          <div className="col-6">
+            <div className="card bg-white mb-3">
+              <div className="card-body">
+                <span className="fs-6 fw-normal">
+                  Skill Gap Rate: {/* Your Value Here */}
+                </span>
+              </div>
+            </div>
+          </div>
+          {/* Chart section */}
+          {/* Bar Chart */}
+          <div className="col-lg-4">
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
                 <span className="fs-6 fw-normal">
@@ -43,12 +62,7 @@ const Dashboard = () => {
                 <ResponsiveContainer width="100%" height={400}>
                   <BarChart
                     data={_mockChartData}
-                    margin={{
-                      top: 20,
-                      right: 10,
-                      left: 5,
-                      bottom: 5,
-                    }}
+                    margin={{ top: 20, right: 10, left: 5, bottom: 5 }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
@@ -62,7 +76,8 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 col-lg-4">
+          {/* Line Chart */}
+          <div className="col-lg-4">
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
                 <span className="fs-6 fw-normal">
@@ -73,12 +88,7 @@ const Dashboard = () => {
                 <ResponsiveContainer width="100%" height={400}>
                   <LineChart
                     data={_mockChartData}
-                    margin={{
-                      top: 20,
-                      right: 10,
-                      left: 5,
-                      bottom: 5,
-                    }}
+                    margin={{ top: 20, right: 10, left: 5, bottom: 5 }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
@@ -97,11 +107,13 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 col-lg-4">
+          {/* Pie Chart */}
+          <div className="col-lg-4">
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
-                <span className="fs-6 fw-normal"></span>Critical Improvement
-                areas
+                <span className="fs-6 fw-normal">
+                  Critical Improvement Areas
+                </span>
               </div>
               <div className="card-body">
                 <ResponsiveContainer width="100%" height={400}>
@@ -112,7 +124,6 @@ const Dashboard = () => {
                       align="right"
                     />
                     <Pie
-                      align="center"
                       data={[
                         { name: "Group A", value: 400 },
                         { name: "Group B", value: 300 },
