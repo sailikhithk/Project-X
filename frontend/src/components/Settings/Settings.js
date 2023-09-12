@@ -6,6 +6,12 @@ const Settings = () => {
     username: "john_doe",
   });
 
+  const [passwordData, setPasswordData] = useState({
+    currentPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserSettings({
@@ -14,15 +20,30 @@ const Settings = () => {
     });
   };
 
+  const handlePasswordChange = (e) => {
+    const { name, value } = e.target;
+    setPasswordData({
+      ...passwordData,
+      [name]: value,
+    });
+  };
+
   const saveChanges = () => {
-    // Here you can send the updated username to the backend
     console.log("Sending to backend:", userSettings);
     setIsEditing(false);
   };
 
   const resetPassword = () => {
-    // Handle password reset here, e.g., open a modal for password reset
-    console.log("Resetting password...");
+    if (passwordData.newPassword === passwordData.confirmPassword) {
+      console.log("Sending password reset to backend:", passwordData);
+      setPasswordData({
+        currentPassword: "",
+        newPassword: "",
+        confirmPassword: "",
+      });
+    } else {
+      console.log("Passwords do not match.");
+    }
   };
 
   return (
@@ -33,15 +54,9 @@ const Settings = () => {
             <div className="card-title m-0">
               <h4 className="fw-bold m-0">Settings</h4>
             </div>
-            <button
-              className="btn btn-sm btn-primary align-self-center"
-              onClick={() => setIsEditing(!isEditing)}
-            >
-              {isEditing ? "Cancel" : "Edit Settings"}
-            </button>
           </div>
           <div className="card-body p-9">
-            <div className="row mb-2 mt-1">
+            <div className="row mb-2 mt-3">
               <label className="col-lg-5 fw-semibold">Username</label>
               <div className="col-lg-7">
                 {isEditing ? (
@@ -59,8 +74,54 @@ const Settings = () => {
               </div>
             </div>
             <div className="row mb-2 mt-3">
+              <div className="col-lg-12 d-flex justify-content-end">
+                {isEditing ? (
+                  <button
+                    className="btn btn-sm btn-success"
+                    onClick={saveChanges}
+                  >
+                    Save Changes
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-sm btn-primary"
+                    onClick={() => setIsEditing(true)}
+                  >
+                    Edit Username
+                  </button>
+                )}
+              </div>
+            </div>
+            <div className="row mb-2 mt-3">
               <label className="col-lg-5 fw-semibold">Reset Password</label>
               <div className="col-lg-7">
+                <div>
+                  <input
+                    type="password"
+                    name="currentPassword"
+                    placeholder="Current Password"
+                    value={passwordData.currentPassword}
+                    onChange={handlePasswordChange}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    name="newPassword"
+                    placeholder="New Password"
+                    value={passwordData.newPassword}
+                    onChange={handlePasswordChange}
+                  />
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirm New Password"
+                    value={passwordData.confirmPassword}
+                    onChange={handlePasswordChange}
+                  />
+                </div>
                 <button
                   className="btn btn-sm btn-warning"
                   onClick={resetPassword}
@@ -70,13 +131,6 @@ const Settings = () => {
               </div>
             </div>
           </div>
-          {isEditing && (
-            <div className="card-footer">
-              <button className="btn btn-sm btn-primary" onClick={saveChanges}>
-                Save Changes
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </div>
