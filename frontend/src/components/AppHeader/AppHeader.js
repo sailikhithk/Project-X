@@ -14,7 +14,7 @@ const AppHeader = () => {
       }}
     >
       <Toolbar>
-        <Typography variant="h6">APP HEADER</Typography>
+        <Typography variant="h6">Hello Christ University!</Typography>
       </Toolbar>
     </AppBar>
   );
