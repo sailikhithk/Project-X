@@ -1,13 +1,12 @@
 import React from "react";
 import MockIcon from "../../images/login.jpg";
-
 import "./CardContainer.css";
 
-const CardContainer = ({ cardLists = [] }) => {
+const CardContainer = ({ cardLists = [], className = "" }) => {
   return cardLists.map((cardItem, index) => {
     const { cardContent = "", cardValue = "" } = cardItem;
     return (
-      <div className="col-sm-6 col-lg-4" key={index}>
+      <div className={`col-sm-6 col-lg-4 ${className}`} key={index}>
         <div className="card bg-primary mb-3">
           <div className="card-body">
             <div>

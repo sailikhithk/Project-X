@@ -14,44 +14,43 @@ import {
   Cell,
   ResponsiveContainer,
 } from "recharts";
+
+import "./Dashboard.css";
 import CardContainer from "../CardContainer";
 import _mockCardLists from "./_mockCardLists.json";
 import _mockChartData from "./_mockChartData.json";
 
 const Dashboard = () => {
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
+  const averageInterviewScore = "74/100";
+  const skillGapRate = "23%";
   return (
     <div className="body flex-grow-1 px-3">
       <div className="container-lg">
         <div className="row">
           {/* Card section */}
-          {_mockCardLists.length ? (
-            <CardContainer cardLists={_mockCardLists} />
-          ) : null}
-          {/* Average Interview Score Card */}
-          <div className="col-6">
-            <div className="card bg-white mb-3">
-              <div className="card-body">
-                <span className="fs-6 fw-normal">
-                  Average Interview Score: {/* Your Value Here */}
-                </span>
-              </div>
-            </div>
+          <div className="col-lg-9 d-flex flex-wrap">
+            {_mockCardLists.length ? (
+              <CardContainer cardLists={_mockCardLists} />
+            ) : null}
           </div>
-          {/* Skill Gap Rate Card */}
-          <div className="col-6">
+          {/* Average Interview Score and Skill Gap Rate Card */}
+          <div className="col-lg-3">
             <div className="card bg-white mb-3">
               <div className="card-body">
                 <span className="fs-6 fw-normal">
-                  Skill Gap Rate: {/* Your Value Here */}
+                  Average Interview Score: {averageInterviewScore}
+                </span>
+                <br />
+                <span className="fs-6 fw-normal">
+                  Skill Gap Rate: {skillGapRate}
                 </span>
               </div>
             </div>
           </div>
           {/* Chart section */}
-          {/* Bar Chart */}
           <div className="col-lg-4">
+            {/* Department wise Participation */}
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
                 <span className="fs-6 fw-normal">
@@ -60,24 +59,22 @@ const Dashboard = () => {
               </div>
               <div className="card-body">
                 <ResponsiveContainer width="100%" height={400}>
-                  <BarChart
-                    data={_mockChartData}
-                    margin={{ top: 20, right: 10, left: 5, bottom: 5 }}
-                  >
+                  <BarChart data={_mockChartData}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-                    <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+                    <Bar dataKey="pv" fill="#8884d8" />
+                    <Bar dataKey="uv" fill="#82ca9d" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
             </div>
           </div>
-          {/* Line Chart */}
+
           <div className="col-lg-4">
+            {/* Department wise Improvement Rate */}
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
                 <span className="fs-6 fw-normal">
@@ -86,29 +83,22 @@ const Dashboard = () => {
               </div>
               <div className="card-body">
                 <ResponsiveContainer width="100%" height={400}>
-                  <LineChart
-                    data={_mockChartData}
-                    margin={{ top: 20, right: 10, left: 5, bottom: 5 }}
-                  >
+                  <LineChart data={_mockChartData}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line
-                      type="basic"
-                      dataKey="pv"
-                      stroke="#8884d8"
-                      activeDot={{ r: 8 }}
-                    />
+                    <Line type="basic" dataKey="pv" stroke="#8884d8" />
                     <Line type="basic" dataKey="uv" stroke="red" />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
             </div>
           </div>
-          {/* Pie Chart */}
+
           <div className="col-lg-4">
+            {/* Critical Improvement Areas */}
             <div className="card bg-white mb-3">
               <div className="card-header bg-white">
                 <span className="fs-6 fw-normal">
@@ -124,6 +114,7 @@ const Dashboard = () => {
                       align="right"
                     />
                     <Pie
+                      dataKey="value"
                       data={[
                         { name: "Group A", value: 400 },
                         { name: "Group B", value: 300 },
@@ -135,8 +126,6 @@ const Dashboard = () => {
                       innerRadius={60}
                       outerRadius={80}
                       fill="#8884d8"
-                      paddingAngle={5}
-                      dataKey="value"
                     >
                       {_mockChartData.map((entry, index) => (
                         <Cell
