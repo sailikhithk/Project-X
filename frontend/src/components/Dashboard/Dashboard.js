@@ -113,10 +113,11 @@ const Dashboard = () => {
               <div className="card-body">
                 <ResponsiveContainer width="100%" height={400}>
                   <PieChart>
+                    {/* Place the legend horizontally at the bottom */}
                     <Legend
-                      layout="vertical"
-                      verticalAlign="middle"
-                      align="right"
+                      layout="horizontal"
+                      verticalAlign="bottom"
+                      align="center"
                     />
                     <Pie
                       dataKey="value"
@@ -126,8 +127,8 @@ const Dashboard = () => {
                         { name: "Group C", value: 300 },
                         { name: "Group D", value: 200 },
                       ]}
-                      cx={100}
-                      cy={200}
+                      cx="50%"
+                      cy="40%"
                       innerRadius={60}
                       outerRadius={80}
                       fill="#8884d8"
