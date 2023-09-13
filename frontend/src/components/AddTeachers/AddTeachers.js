@@ -16,7 +16,7 @@ const AddTeachers = () => {
   };
 
   return (
-    <div className="body flex-grow-1 px-3">
+    <div className="body flex-grow-1">
       <div className="container-lg">
         <div className="row">
           <div className="col-lg-12 mt-1">

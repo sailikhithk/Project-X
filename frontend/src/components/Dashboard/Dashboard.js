@@ -25,7 +25,7 @@ const Dashboard = () => {
   const averageInterviewScore = "74/100";
   const skillGapRate = "23%";
   return (
-    <div className="body flex-grow-1 px-3">
+    <div className="body flex-grow-1">
       <div className="container-lg">
         <div className="row">
           {/* Card section */}
@@ -37,17 +37,24 @@ const Dashboard = () => {
           {/* Average Interview Score and Skill Gap Rate Card */}
           <div className="col-lg-3">
             <div className="card bg-white mb-3">
-              <div className="card-body">
-                <span className="fs-6 fw-normal">
-                  Average Interview Score: {averageInterviewScore}
-                </span>
-                <br />
-                <span className="fs-6 fw-normal">
-                  Skill Gap Rate: {skillGapRate}
-                </span>
+              <div className="card-body" style={{ height: "155px" }}>
+                <div>
+                  <span className="fs-5 fw-normal">
+                    Average Interview Score :{" "}
+                  </span>
+                  <span className="fs-5 fw-semibold">
+                    {averageInterviewScore}
+                  </span>
+                </div>
+                <div className="mt-2">
+                  <span className="fs-5 fw-normal">Skill Gap Rate : </span>
+                  <span className="fs-5 fw-semibold">{skillGapRate}</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="row">
           {/* Chart section */}
           <div className="col-lg-4">
             {/* Department wise Participation */}
@@ -72,7 +79,6 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-
           <div className="col-lg-4">
             {/* Department wise Improvement Rate */}
             <div className="card bg-white mb-3">
@@ -96,7 +102,6 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-
           <div className="col-lg-4">
             {/* Critical Improvement Areas */}
             <div className="card bg-white mb-3">

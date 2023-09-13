@@ -14,7 +14,7 @@ import _mockChartData from "./_mockChartData.json";
 
 const EmotionSensing = () => {
   return (
-    <div className="body flex-grow-1 px-3">
+    <div className="body flex-grow-1">
       <div className="container-lg">
         <div className="row">
           {/** chart section */}

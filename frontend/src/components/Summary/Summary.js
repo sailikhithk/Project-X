@@ -6,7 +6,7 @@ const Summary = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="body flex-grow-1 px-3">
+    <div className="body flex-grow-1">
       <div className="container-lg">
         <div className="row">
           <div className="col-sm-6 col-lg-6 mt-3">
