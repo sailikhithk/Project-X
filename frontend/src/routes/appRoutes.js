@@ -15,6 +15,7 @@ import EmotionSensing from "../components/EmotionSensing";
 import HardSkillSoftSkills from "../components/HardSkillSoftSkills";
 import Overview from "../components/Overview";
 import Settings from "../components/Settings";
+import UserReport from "../components/UserReport";
 
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 
@@ -27,6 +28,11 @@ const appRoutes = [
       displayText: "Dashboard",
       icon: <DashboardOutlinedIcon />,
     },
+  },
+  {
+    path: "/report",
+    element: <UserReport />,
+    state: "report",
   },
   {
     path: "/deep-analysis",

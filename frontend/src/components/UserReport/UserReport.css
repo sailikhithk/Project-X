@@ -1,0 +1,58 @@
+.page {
+  page-break-after: always;
+}
+
+/** report1 start */
+.report1-main-container {
+  background: #b49fd8;
+  height: min-content;
+}
+.report1-sub-container {
+  background: #fff;
+  height: min-content;
+  margin: 4rem 4rem 4rem -12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.report1-title {
+  color: #b49fd8;
+}
+.report1-cap {
+  color: #452b4e;
+}
+.report1-footer {
+  padding: 10px;
+  background: #a84e85;
+  border-radius: 20px;
+}
+.report1-footer-txt {
+  color: #fff;
+}
+/** report1 end */
+
+/** report2 start */
+.report2-top-container {
+  height: 10vh;
+  background: #b49fd8;
+}
+.report2-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report2-btn {
+  color: #fff;
+}
+.report2-score-red {
+  color: #ff5757;
+}
+.report2-score-green {
+  color: #00bf63;
+}
+.report2-score-orange {
+  color: #ff914d;
+}
+.report2-text {
+  color: #495057;
+}
+/** report2 end */
