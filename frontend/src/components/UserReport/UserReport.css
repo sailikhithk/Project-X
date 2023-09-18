@@ -10,20 +10,26 @@
 .report1-sub-container {
   background: #fff;
   height: min-content;
-  margin: 4rem 4rem 4rem -12px;
+  margin: 6rem 3rem 6rem -12px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-left: thin solid #000;
 }
 .report1-title {
   color: #b49fd8;
+}
+.report1-cap-container {
+  margin-top: 10rem;
 }
 .report1-cap {
   color: #452b4e;
 }
 .report1-footer {
-  padding: 10px;
+  padding: 8px;
   background: #a84e85;
   border-radius: 20px;
+  margin-left: 12px;
+  width: 90%;
 }
 .report1-footer-txt {
   color: #fff;
@@ -32,7 +38,7 @@
 
 /** report2 start */
 .report2-top-container {
-  height: 10vh;
+  height: 8vh;
   background: #b49fd8;
 }
 .report2-btn-container {
@@ -54,5 +60,35 @@
 }
 .report2-text {
   color: #495057;
+}
+.report2-section1 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report2-sub-section1 {
+  padding: 0;
+}
+.report2-section2 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  margin: 0;
+}
+.report2-section3 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  margin: 0;
+}
+.report2-section4 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  margin: 0;
+}
+.report2-section5 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  margin: 0;
 }
 /** report2 end */
