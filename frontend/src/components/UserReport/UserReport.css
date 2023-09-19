@@ -92,3 +92,171 @@
   margin: 0;
 }
 /** report2 end */
+
+/** report3 start */
+.report3-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report3-btn {
+  color: #fff;
+}
+.report3-description-container {
+  padding: 15px;
+  background: #a84e85;
+}
+.report3-description {
+  color: #fff;
+}
+.report3-mindset {
+  color: #452b4e;
+}
+.report3-growth {
+  color: #ff5757;
+}
+.report3-red {
+  color: #ff5757;
+}
+.report3-green {
+  color: #00bf63;
+}
+.report3-orange {
+  color: #ff914d;
+}
+.report3-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report3-section2,
+.report3-section3,
+.report3-section4,
+.report3-section5 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report3-section6 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+/** report3 end */
+
+/** report4 start */
+.report4-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report4-btn {
+  color: #fff;
+}
+.report4-description-container {
+  padding: 15px;
+  background: #a84e85;
+}
+.report4-description {
+  color: #fff;
+}
+.report4-skill {
+  color: #452b4e;
+}
+.report4-hrPro {
+  color: #ff5757;
+}
+.report4-red {
+  color: #ff5757;
+}
+.report4-green {
+  color: #00bf63;
+}
+.report4-orange {
+  color: #ff914d;
+}
+.report4-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report4-section2,
+.report4-section3,
+.report4-section4,
+.report4-section5 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report4-section6 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+/** report4 end */
+
+/** report5 start */
+.report5-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report5-btn {
+  color: #fff;
+}
+.report5-description-container {
+  padding: 15px;
+  background: #a84e85;
+}
+.report5-description {
+  color: #fff;
+}
+.report5-skill {
+  color: #452b4e;
+}
+.report5-hrPro {
+  color: #ff5757;
+}
+.report5-red {
+  color: #ff5757;
+}
+.report5-green {
+  color: #00bf63;
+}
+.report5-orange {
+  color: #ff914d;
+}
+.report5-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report5-section2,
+.report5-section3,
+.report5-section4,
+.report5-section5 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report5-section6 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+/** report5 end */

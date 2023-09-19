@@ -14,17 +14,35 @@ const UserReport = () => {
     const imgWidth = canvas.width;
     const imgHeight = canvas.height;
 
-    // Calculate dimensions to keep the aspect ratio
-    const pdfWidth = pdf.internal.pageSize.getWidth() - marginLeft * 2; // Adjusting for margins
-    const pdfHeight = (imgHeight * pdfWidth) / imgWidth;
+    // Get the dimensions of the PDF page
+    const pdfPageWidth = pdf.internal.pageSize.getWidth() - marginLeft * 2;
+    const pdfPageHeight = pdf.internal.pageSize.getHeight() - marginTop * 2;
+
+    // Calculate the aspect ratio of the canvas and the PDF page
+    const canvasAspectRatio = imgWidth / imgHeight;
+    const pdfPageAspectRatio = pdfPageWidth / pdfPageHeight;
+
+    let dimensions;
+
+    if (canvasAspectRatio > pdfPageAspectRatio) {
+      dimensions = {
+        width: pdfPageWidth,
+        height: pdfPageWidth / canvasAspectRatio,
+      };
+    } else {
+      dimensions = {
+        width: pdfPageHeight * canvasAspectRatio,
+        height: pdfPageHeight,
+      };
+    }
 
     pdf.addImage(
       imgData,
       "PNG",
       x + marginLeft,
       y + marginTop,
-      pdfWidth,
-      pdfHeight
+      dimensions.width,
+      dimensions.height
     );
   };
 
@@ -109,7 +127,7 @@ const UserReport = () => {
           </div>
         </div>
         <div className="row mt-5 page" id="page2">
-          <div className="row bg-white report2-section1">
+          <div className="bg-white report2-section1">
             <div className="col-sm-12 col-lg-12 report2-sub-section1">
               <div className="d-flex justify-content-end align-items-center report2-top-container ">
                 <span className="me-3 report2-btn-container">
@@ -252,6 +270,462 @@ const UserReport = () => {
                   upper body.This is critical for non-verbalcommunication.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 page" id="page3">
+          <div className="row bg-white report3-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-4 ms-4 mb-4">
+                  <span className="fs-4 fw-semibold">
+                    Interview Score by Category
+                  </span>
+                </div>
+                <div className="mt-4 me-4 mb-4 report3-btn-container">
+                  <span className="fs-5 fw-normal report3-btn">Part Two</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report3-section2">
+            <div className="col-sm-4 col-lg-4 p-4 mt-4">
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <div>
+                  <span className="fs-1 fw-bold report3-mindset">8/10</span>
+                </div>
+                <div>
+                  <span className="fs-5 fw-semibold report3-mindset">
+                    Mindset/Attitude
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report3-growth">
+                  Growth Mindset
+                </span>
+              </div>
+              <div>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha exhibited a growth mindset and apositive attitude
+                  throughout the interview.However, she sometimes sounded
+                  defensivewhen asked about past failures, instead ofembracing
+                  them as learning opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report3-section3">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report3-red">2/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Resilience
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha showed resilience indealing with past challenges,
+                  butthere were moments where sheappeared defensive when
+                  askedabout failures. It's essential topresent these instances
+                  aslearning experiences.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report3-orange">7/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Teamwork
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  She shared relevant instances ofsuccessful team
+                  collaboration.However, she could improve onrecognizing and
+                  articulating thecontributions of team membersto project
+                  successes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report3-section4">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report3-green">9/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Adaptability
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha provided good examplesof adapting to
+                  changingcircumstances in her previousroles, demonstrating her
+                  abilityto manage change effectively.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report3-red">5/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Initiative
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  While Arpitha showed initiativein certain scenarios, she
+                  mayneed to emphasize moreproactive behavior in identifyingand
+                  addressing challenges.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report3-section5">
+            <div className="col-sm-12 col-lg-12 p-4">
+              <div className="mt-3 report3-description-container">
+                <span className="fs-5 fw-semibold text-break report3-description">
+                  Can you describe a time when you showed resilience in
+                  achallenging work situation?
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report3-section6">
+            <div className="col-sm-6 col-lg-6 p-4">
+              <div>
+                <span className="fs-5 fw-semibold">Arpitha's Answer:</span>
+                <p className="fs-6 fw-normal text-break">
+                  "Well, there was a time when we had a majorissue with a
+                  project I was handling. I justmade sure we got it done."
+                </p>
+              </div>
+              <div className="mt-4">
+                <span className="fs-5 fw-semibold">Insights</span>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha's answer is rather brief and lacksspecificity. She
+                  could benefit fromexplaining the situation more
+                  vividly,describing her actions in detail, andhighlighting the
+                  result of her resilience.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4">
+              <span className="fs-5 fw-semibold">Curated Answer</span>
+              <p className="fs-6 fw-normal text-break">
+                "At my previous job, we faced a situationwhere a critical HR
+                transformationproject was at risk due to unexpectedbudget cuts.
+                Instead of giving up, I tookthe initiative to reassess our
+                resourcesand recalibrate our project plan. Westreamlined our
+                activities, prioritizedtasks more effectively, and managed
+                tocomplete the project successfully underbudget. This experience
+                has honed myresilience and ability to adapt tochallenging
+                circumstances."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 page" id="page4">
+          <div className="row bg-white report4-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-4 ms-4 mb-4">
+                  <span className="fs-4 fw-semibold">
+                    Interview Score by Category
+                  </span>
+                </div>
+                <div className="mt-4 me-4 mb-4 report4-btn-container">
+                  <span className="fs-5 fw-normal report4-btn">Part Two</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report4-section2">
+            <div className="col-sm-4 col-lg-4 p-4 mt-4">
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <div>
+                  <span className="fs-1 fw-bold report4-skill">6/10</span>
+                </div>
+                <div>
+                  <span className="fs-5 fw-semibold report4-skill">
+                    Knowledge/Skill
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-hrPro">HR Pro</span>
+              </div>
+              <div>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha demonstrated good understanding ofHR transformation
+                  concepts, but struggled abit with some Deloitte-specific
+                  methodologies.This may indicate a lack of preparation
+                  orresearch.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report4-section3">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-red">2/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  HR Transformation Knowledge
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha has a solidunderstanding of HRtransformation. She
+                  struggled abit with Deloitte's specificmethodologies, which
+                  indicatesa need for more company-specific research.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-orange">7/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Communication Skills:
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  She communicates her ideaseffectively. However, claritycould
+                  be improved whendiscussing complex topics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report4-section4">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-green">9/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Leadership Skills
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha has shown she can leadinitiatives, but her ability
+                  toinspire and direct teams couldbe further demonstrated.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-red">5/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Technical Skills
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha demonstrated goodfamiliarity with HR
+                  technologies.However, knowledge of up-to-date technologies,
+                  especiallythose used by Deloitte, wouldmake her a stronger
+                  candidate.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report4-section5">
+            <div className="col-sm-12 col-lg-12 p-4">
+              <div className="mt-3 report4-description-container">
+                <span className="fs-5 fw-semibold text-break report4-description">
+                  Can you tell us about a situation where you leveraged your
+                  HRtransformation knowledge to drive change in an organization?
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report4-section6">
+            <div className="col-sm-6 col-lg-6 p-4">
+              <div>
+                <span className="fs-5 fw-semibold">Arpitha's Answer:</span>
+                <p className="fs-6 fw-normal text-break">
+                  "Yes, I used my HR knowledge to make somechanges in our
+                  processes at my last job."
+                </p>
+              </div>
+              <div className="mt-4">
+                <span className="fs-5 fw-semibold">Insights</span>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha's response is lacking in detail anddoesn't provide a
+                  clear picture of herexpertise in action. By detailing
+                  thesituation, task, action, and result, Arpithacan better
+                  showcase her skills andknowledge.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4">
+              <span className="fs-5 fw-semibold">Curated Answer</span>
+              <p className="fs-6 fw-normal text-break">
+                In my previous role at XYZ Corp, we werestruggling with outdated
+                and inefficientHR processes. Leveraging my knowledgein HR
+                transformation, I identified the needfor a more robust, digital
+                solution. Iproposed the implementation of a cloud-based HR
+                platform, outlining its benefitsfor efficiency and scalability.
+                Aftergetting the green light, I led the migrationprocess from
+                legacy systems to the newplatform, and trained the HR team on
+                itsuse. As a result, we improved our HRoperations efficiency by
+                40%.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 page" id="page5">
+          <div className="row bg-white report5-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-4 ms-4 mb-4">
+                  <span className="fs-4 fw-semibold">
+                    Interview Score by Category
+                  </span>
+                </div>
+                <div className="mt-4 me-4 mb-4 report5-btn-container">
+                  <span className="fs-5 fw-normal report5-btn">Part Two</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report5-section2">
+            <div className="col-sm-4 col-lg-4 p-4 mt-4">
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <div>
+                  <span className="fs-1 fw-bold report5-skill">6/10</span>
+                </div>
+                <div>
+                  <span className="fs-5 fw-semibold report5-skill">
+                    Experience/ Practical Thinking
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report4-hrPro">
+                  Equipped Mastery
+                </span>
+              </div>
+              <div>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha's practical experience is evident in her responses.She
+                  provided solid examples of her previous work in
+                  HRtransformation. However, the we detected some confusionin
+                  her tone while addressing complex problems,suggesting she may
+                  need to practice articulating herthoughts clearly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report5-section3">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report5-red">2/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Problem-solving
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha has demonstrated herability to solve practicalproblems
+                  through herexperience. However, sheoccasionally seemed
+                  confusedwhen addressing complex issues.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report5-orange">7/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Decision-making
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha showed good decision-making skills in past
+                  scenarios.However, she could work onpresenting these decisions
+                  moreconfidently.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report5-section4">
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report5-green">9/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Experience with HR Initiatives
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha's experience with HRtransformations is strong
+                  andevident in her responses. She hasgiven specific examples
+                  ofprojects she's led.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4 mt-4">
+              <div>
+                <span className="fs-4 fw-semibold report5-red">5/10</span>
+                <span className="fs-5 fw-semibold ms-2 text-decoration-underline">
+                  Project Management
+                </span>
+              </div>
+              <div className="ms-5">
+                <p className="fs-6 fw-semibold text-break">
+                  Arpitha showed strong skills inmanaging projects,
+                  timelines,and resources in her previousroles. She should
+                  continue toemphasize this strength.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report5-section5">
+            <div className="col-sm-12 col-lg-12 p-4">
+              <div className="mt-3 report5-description-container">
+                <span className="fs-5 fw-semibold text-break report5-description">
+                  Can you discuss an experience where your practical thinkingled
+                  to a significant positive outcome?
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report5-section6">
+            <div className="col-sm-6 col-lg-6 p-4">
+              <div>
+                <span className="fs-5 fw-semibold">Arpitha's Answer:</span>
+                <p className="fs-6 fw-normal text-break">
+                  I once solved a problem at work. It workedout pretty well.
+                </p>
+              </div>
+              <div className="mt-4">
+                <span className="fs-5 fw-semibold">Insights</span>
+                <p className="fs-6 fw-normal text-break">
+                  Arpitha's response is too generic. She needsto provide a more
+                  specific example to trulyillustrate her practical thinking
+                  skills andhow they resulted in a positive outcome.
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-6 p-4">
+              <span className="fs-5 fw-semibold">Curated Answer</span>
+              <p className="fs-6 fw-normal text-break">
+                During my tenure at ABC Company, we werefacing low employee
+                engagement scores. Usingmy experience, I hypothesized that this
+                was dueto a lack of transparent communication andrecognition
+                within the organization. I proposed acomprehensive employee
+                engagementprogram, which included regular town hallmeetings, an
+                internal newsletter, and a monthlyrecognition system.
+                Implementing theseinitiatives led to a 25% increase in our
+                employeeengagement scores over the next six months,demonstrating
+                the power of practical,experience-based problem-solving
+              </p>
             </div>
           </div>
         </div>
