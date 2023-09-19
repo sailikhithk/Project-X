@@ -24,7 +24,7 @@ const MainLayout = () => {
           p: 3,
           width: `calc(100% - 270px)`,
           minHeight: "100vh",
-          backgroundColor: "#FDFAF5",
+          backgroundColor: "#fff",
         }}
       >
         <Toolbar />
