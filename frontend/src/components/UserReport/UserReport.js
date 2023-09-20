@@ -729,6 +729,174 @@ const UserReport = () => {
             </div>
           </div>
         </div>
+        <div className="row mt-5 page" id="page6">
+          <div className="row bg-white report6-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-5 ms-4 mb-5">
+                  <span className="fs-3 fw-semibold report6-wus">
+                    Where you stand
+                  </span>
+                </div>
+                <div className="mt-5 me-4 mb-5 report6-btn-container">
+                  <span className="fs-5 fw-normal report6-btn">Part Three</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report6-section2">
+            <div className="col-sm-12 col-lg-12">
+              <div className="mt-5 ms-4 mb-5">
+                <span className="fs-5 fw-normal">
+                  Certain Application Insight
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white report6-section3">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-5 ms-4 me-4 mb-5">
+                  <div>
+                    <span className="fs-1 fw-bold report6-text">75%</span>
+                  </div>
+                  <div>
+                    <span className="fs-5 fw-semibold report6-text">
+                      You wouldstand in thetop 75% applicants
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-5 ms-4 me-4 mb-5">
+                  <div>
+                    <span className="fs-1 fw-bold report6-text">50</span>
+                  </div>
+                  <div>
+                    <span className="fs-5 fw-semibold report6-text">
+                      Content
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-5 ms-4 me-4 mb-5">
+                  <div>
+                    <span className="fs-1 fw-bold report6-text">3</span>
+                  </div>
+                  <div>
+                    <span className="fs-5 fw-semibold report6-text">
+                      Content Highlight
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 page" id="page7">
+          <div className="row bg-white report7-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-5 ms-4 mb-5">
+                  <span className="fs-3 fw-semibold report7-crb">
+                    Company and Role Based Curated Summary
+                  </span>
+                </div>
+                <div className="mt-5 me-4 mb-5 report7-btn-container">
+                  <span className="fs-5 fw-normal report7-btn">Part Three</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white ps-5 report7-section2">
+            <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
+              <div>
+                <span className="fs-5 fw-semibold report7-text-clr">About TheCompany</span>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8">
+              <div className="mt-4 ms-4 mb-5">
+                <div>
+                  <p>
+                    Deloitte is a global leader in consulting and has a
+                    robustframework for HR transformation, which includes
+                    cloudtechnologies, process improvement, and
+                    changemanagement. Familiarize yourself with their approach.
+                  </p>
+                  <p>
+                    Deloitte often works with diverse, global teams. If you
+                    haveany experiences working in diverse or cross-cultural
+                    settings,be sure to mention these.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white ps-5 report7-section3">
+            <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
+              <div>
+                <span className="fs-5 fw-semibold report7-text-clr">Companyrelated recentnews</span>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8">
+              <div className="mt-4 ms-4 mb-5">
+                <div>
+                  <p>
+                    In recent news, Deloitte has announced plans to
+                    increasetheir investment in AI and digital transformation
+                    services.Mentioning awareness of this can show that you stay
+                    updatedwith company news.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white ps-5 report7-section4">
+            <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
+              <div>
+                <span className="fs-5 fw-semibold report7-text-clr">Role-specificSkills</span>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8">
+              <div className="mt-4 ms-4 mb-5">
+                <div>
+                  <p>
+                    Showcasing your experience with digital HR platforms is
+                    crucialfor a HR Transformation Consultant role at Deloitte.
+                  </p>
+                  <p>
+                    Deloitte's HR Transformation services also involve
+                    processredesign and change management. Share examples of
+                    yourexperience in these areas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bg-white ps-5 report7-section5">
+            <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-5 report7-wrapper">
+              <div>
+                <span className="fs-5 fw-semibold report7-text-clr">Industry Trends</span>
+              </div>
+            </div>
+            <div className="col-sm-8 col-lg-8">
+              <div className="mt-4 ms-4 mb-5">
+                <div>
+                  <p>
+                    The HR industry is increasingly leveraging AI and
+                    machinelearning for various HR functions. Highlighting your
+                    awarenessand any experience you have with these technologies
+                    could bebeneficial.
+                  </p>
+                  <p>
+                    According to a recent study, HR departments are playing a
+                    keyrole in environmental, social and governance (ESG)
+                    initiatives.This is also an area that Deloitte is focusing
+                    on, as per recentnews. Be prepared to discuss your views or
+                    experience in thisarea.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="row mt-5">
           <div className="d-flex justify-content-center align-items-center mt-4">
             <button

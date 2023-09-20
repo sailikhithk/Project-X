@@ -260,3 +260,79 @@
   margin: 0;
 }
 /** report5 end */
+
+/** report6 start */
+.report6-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report6-btn {
+  color: #fff;
+}
+.report6-wus {
+  color: #452b4e;
+}
+.report6-text {
+  color: #a84e85;
+}
+.report6-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report6-section2 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report6-section3 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+/** report6 end */
+
+/** report7 start */
+.report7-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report7-section2,
+.report7-section3,
+.report7-section4 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report7-section5 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+}
+.report7-btn-container {
+  background: #a84e85;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+.report7-btn {
+  color: #fff;
+}
+.report7-wrapper {
+  background: #a84e85;
+}
+.report7-text-clr {
+  color: #fff;
+}
+/** report7 end */
