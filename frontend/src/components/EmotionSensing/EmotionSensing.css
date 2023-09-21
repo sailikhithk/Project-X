@@ -1,0 +1,15 @@
+.line-legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+  }
+  
+  .line-legend-color {
+    width: 15px; /* Adjust the color box width as needed */
+    height: 15px; /* Adjust the color box height as needed */
+    margin-right: 8px; /* Adjust the margin as needed */
+  }
+
+  .line-legend-text {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
