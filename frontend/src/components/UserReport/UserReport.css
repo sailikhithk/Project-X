@@ -104,7 +104,7 @@
 }
 .report3-description-container {
   padding: 15px;
-  background: #a84e85;
+  background: #b49fd8;
 }
 .report3-description {
   color: #fff;
@@ -160,7 +160,7 @@
 }
 .report4-description-container {
   padding: 15px;
-  background: #a84e85;
+  background: #b49fd8;
 }
 .report4-description {
   color: #fff;
@@ -216,7 +216,7 @@
 }
 .report5-description-container {
   padding: 15px;
-  background: #a84e85;
+  background: #b49fd8;
 }
 .report5-description {
   color: #fff;
@@ -330,9 +330,28 @@
   color: #fff;
 }
 .report7-wrapper {
-  background: #a84e85;
+  background: #b49fd8;
 }
 .report7-text-clr {
   color: #fff;
 }
 /** report7 end */
+
+/** report8 start */
+.report8-section1 {
+  border-top: thin solid #000;
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  padding: 0;
+  margin: 0;
+  background: #b49fd8;
+}
+.report8-section2 {
+  border-left: thin solid #000;
+  border-right: thin solid #000;
+  border-bottom: thin solid #000;
+  padding: 0;
+  margin: 0;
+  background: #b49fd8;
+}
+/** report8 end */

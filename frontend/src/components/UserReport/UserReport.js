@@ -808,7 +808,9 @@ const UserReport = () => {
           <div className="row bg-white ps-5 report7-section2">
             <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
               <div>
-                <span className="fs-5 fw-semibold report7-text-clr">About TheCompany</span>
+                <span className="fs-5 fw-semibold report7-text-clr">
+                  About TheCompany
+                </span>
               </div>
             </div>
             <div className="col-sm-8 col-lg-8">
@@ -832,7 +834,9 @@ const UserReport = () => {
           <div className="row bg-white ps-5 report7-section3">
             <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
               <div>
-                <span className="fs-5 fw-semibold report7-text-clr">Companyrelated recentnews</span>
+                <span className="fs-5 fw-semibold report7-text-clr">
+                  Companyrelated recentnews
+                </span>
               </div>
             </div>
             <div className="col-sm-8 col-lg-8">
@@ -851,7 +855,9 @@ const UserReport = () => {
           <div className="row bg-white ps-5 report7-section4">
             <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-4 report7-wrapper">
               <div>
-                <span className="fs-5 fw-semibold report7-text-clr">Role-specificSkills</span>
+                <span className="fs-5 fw-semibold report7-text-clr">
+                  Role-specificSkills
+                </span>
               </div>
             </div>
             <div className="col-sm-8 col-lg-8">
@@ -873,7 +879,9 @@ const UserReport = () => {
           <div className="row bg-white ps-5 report7-section5">
             <div className="col-sm-4 col-lg-4 d-flex justify-content-center align-items-center mb-5 report7-wrapper">
               <div>
-                <span className="fs-5 fw-semibold report7-text-clr">Industry Trends</span>
+                <span className="fs-5 fw-semibold report7-text-clr">
+                  Industry Trends
+                </span>
               </div>
             </div>
             <div className="col-sm-8 col-lg-8">
@@ -893,6 +901,34 @@ const UserReport = () => {
                     experience in thisarea.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 page" id="page8">
+          <div className="row report8-section1">
+            <div className="col-sm-12 col-lg-12">
+              <div className="mt-5 ms-4 mb-5">
+                <span className="ms-4 fs-3 fw-semibold report8-crb">START X</span>
+              </div>
+            </div>
+          </div>
+          <div className="row ps-5 report8-section2">
+            <div className="col-sm-12 col-lg-12">
+              <div className="mt-4 mb-4">
+                <span className="fs-4 fw-semibold report8-crb">
+                  +91 8328057448
+                </span>
+              </div>
+              <div className="mt-4 mb-4">
+                <span className="fs-4 fw-semibold report8-crb">
+                  hello@startx.com
+                </span>
+              </div>
+              <div className="mt-4 mb-5">
+                <span className="fs-4 fw-semibold report8-crb">
+                  www.startx.com
+                </span>
               </div>
             </div>
           </div>
