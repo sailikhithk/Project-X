@@ -5,3 +5,28 @@
 .CardContainer-value {
   color: #252f4a;
 }
+
+.dashboard-card-body {
+  background-color: #5271FF;
+  border-radius: 15px;
+  border-color: transparent;
+  padding: 10px 10px 20px 40px;
+  width: 250px;
+  height: 160px;
+}
+
+.text{
+  font-family: 'Poppins';
+  vertical-align: middle;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.content-container{
+  height: 50px;
+  display: flex;
+  align-items: center ;
+  margin-top: 10px;
+}

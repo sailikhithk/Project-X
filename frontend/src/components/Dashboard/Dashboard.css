@@ -1,4 +1,39 @@
 .card-margin {
-    margin: 10 30px 30px 10;
-    /* Adjust the values as needed */
+  margin: 10 30px 30px 10;
+  /* Adjust the values as needed */
+}
+
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.axis-data {
+  font-size: 11px;
+}
+.circular-legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-legend-color {
+  width: 15px; /* Adjust the color box width as needed */
+  height: 15px; /* Adjust the color box height as needed */
+  margin-right: 8px; /* Adjust the margin as needed */
+  border-radius: 50%;
+}
+
+.circular-legend-color-line {
+  border-radius: 0%;
+  width: 15px;
+  height: 10px;
+  margin-right: 8px;
+}
+
+.circular-legend-item-line {
+  justify-content: flex-start;
+}
+.circular-legend-text {
+  font-size: 14px; /* Adjust the font size as needed */
 }

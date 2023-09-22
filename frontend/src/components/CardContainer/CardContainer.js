@@ -7,8 +7,8 @@ const CardContainer = ({ cardLists = [], className = "" }) => {
     const { cardContent = "", cardValue = "" } = cardItem;
     return (
       <div className={`col-sm-6 col-lg-4 ${className}`} key={index}>
-        <div className={`card bg-primary mb-3 ${index !== 0 ? "ms-4" : ""}`}>
-          <div className="card-body">
+        <div className={`mb-3 ${index !== 0 ? "ms-4" : ""}`}>
+          <div className="dashboard-card-body">
             <div>
               <img
                 src={MockIcon}
@@ -18,13 +18,13 @@ const CardContainer = ({ cardLists = [], className = "" }) => {
               />
             </div>
             <div
-              className="fs-5 fw-normal text-truncate mt-3"
               title={cardContent}
+              className="content-container"
             >
-              <span className="text-white">{cardContent}</span>
+              <span className="text text-white fs-6 fw-normal" >{cardContent}</span>
             </div>
-            <div className="fs-4 fw-semibold text-truncate mt-3">
-              <span className="text-white">{cardValue}</span>
+            <div>
+              <span className="text  text-white fs-2 fw-semibold ">{cardValue}</span>
             </div>
           </div>
         </div>

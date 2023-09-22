@@ -21,13 +21,15 @@ const AppHeader = () => {
   };
 
   const handleClose = (type) => {
-    const navigationUrl =
-      type === "PROFILE"
-        ? "/account/overview"
-        : type === "SETTINGS"
-        ? "/account/settings"
-        : "/";
-    navigate(navigationUrl, { replace: type === "LOGOUT" ? true : false });
+    if (type === "PROFILE") {
+      navigate("/account/overview");
+    }
+    if (type === "SETTINGS") {
+      navigate("/account/settings");
+    }
+    if (type === "LOGOUT") {
+      navigate("/", { replace: true });
+    }
     setAnchorEl(null);
   };
 
@@ -38,7 +40,7 @@ const AppHeader = () => {
         width: `calc(100% - 270px)`,
         ml: "270px",
         boxShadow: "unset",
-        backgroundColor: "#E8E8E8",
+        backgroundColor: "#fff",
         color: "#071437",
       }}
     >
