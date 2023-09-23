@@ -37,3 +37,12 @@
 .circular-legend-text {
   font-size: 14px; /* Adjust the font size as needed */
 }
+.icon{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.filter-container{
+  display: flex; 
+  align-items: center
+}

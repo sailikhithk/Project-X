@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   PieChart,
   Pie,
@@ -21,11 +21,23 @@ import CardContainer from "../CardContainer";
 import _mockCardLists from "./_mockCardLists.json";
 import _mockChartData from "./_mockChartData.json";
 import FilterIcon from "../../images/filter.png";
+import SelectComponent from "../Select/Select";
+import FilterComponent from "../Filter/Filter";
 
 const Dashboard = () => {
   const COLORS = ["#6CE5E8", "#5271FF", "#005B82", "#00B4EC"];
   const averageInterviewScore = "74/100";
   const skillGapRate = "23%";
+  const [selectedValue, setSelectedValue] = useState("");
+  const [options, setOptions] = useState([
+    "All Branches",
+    "Branch1",
+    "Branch2",
+  ]);
+
+  const handleSelectChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
 
   const legendFormatter = (value, entry, type) => {
     return (
@@ -50,7 +62,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="body flex-grow-1 mt-4" style={{ background: "#fff" }}>
+    <div className="body flex-grow-1 mt-5" style={{ background: "#fff" }}>
       <div className="container-lg">
         <div className="row">
           {/* Card section */}
@@ -61,10 +73,13 @@ const Dashboard = () => {
           </div>
           {/* Average Interview Score and Skill Gap Rate Card */}
           <div className="col-lg-3">
-            <div style={{marginBottom: '20px', marginTop: '-50px'}}>
-              <img src={FilterIcon} className="img-fluid" alt="Filter Icon" />
-              <span className="text" style={{ color: "#FF1616" , marginLeft: '10px'}}>All Branches</span>
-            </div>
+            <FilterComponent
+              icon={FilterIcon}
+              color={"#FF1616"}
+              handleSelectChange={handleSelectChange}
+              selectedValue={selectedValue}
+              options={options}
+            />
             <div className=" bg-white mb-3">
               <div className="" style={{ height: "155px" }}>
                 <div>
@@ -106,7 +121,7 @@ const Dashboard = () => {
             <div className="mb-3">
               <div className="card-header horizontal-center">
                 <span
-                  className="fs-6 fw-normal text  text-center"
+                  className="fs-6 fw-medium text  text-center"
                   style={{ color: "#545454" }}
                 >
                   Department wise Participation
@@ -157,7 +172,7 @@ const Dashboard = () => {
                         position: "relative",
                         top: "-60px",
                         width: "150px",
-                        left: '50px'
+                        left: "50px",
                       }}
                     />
                     <Bar
@@ -183,7 +198,7 @@ const Dashboard = () => {
             <div className=" bg-white mb-3">
               <div className="card-header bg-white horizontal-center">
                 <span
-                  className="fs-6 fw-normal text  text-center"
+                  className="fs-6 fw-medium text  text-center"
                   style={{ color: "#545454" }}
                 >
                   Department wise Improvement Rate
@@ -240,7 +255,7 @@ const Dashboard = () => {
                         position: "relative",
                         top: "-60px",
                         width: "150px",
-                        left: '50px',
+                        left: "50px",
                       }}
                     />
                     <Line
@@ -265,7 +280,7 @@ const Dashboard = () => {
             <div className="bg-white mb-3">
               <div className="card-header bg-white horizontal-center">
                 <span
-                  className="fs-6 fw-normal text  text-center"
+                  className="fs-6 fw-medium text  text-center"
                   style={{ color: "#545454" }}
                 >
                   Critical Improvement Areas

@@ -35,16 +35,16 @@ const SidebarItemCollapse = ({ item }) => {
       >
         <ListItemIcon
           sx={{
-            color: "#00B2FF",
+            color: "#5271FF",
           }}
         >
           {item.sidebarProps.icon && item.sidebarProps.icon}
         </ListItemIcon>
         <ListItemText
           disableTypography
-          primary={<Typography>{item.sidebarProps.displayText}</Typography>}
+          primary={<Typography><span className="text fw-medium" style={{color: '#5271FF'}}>{item.sidebarProps.displayText}</span></Typography>}
         />
-        {open ? <ExpandLessOutlinedIcon /> : <ExpandMoreOutlinedIcon />}
+        {open ? <ExpandLessOutlinedIcon  style={{color:"#5271FF"}}/> : <ExpandMoreOutlinedIcon style={{color:"#5271FF"}}  />}
       </ListItemButton>
       <Collapse in={open} timeout="auto">
         <List>

@@ -1,0 +1,17 @@
+/* styles.css */
+.dropdown-container {
+    position: relative;
+  }
+  
+  .custom-dropdown {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .custom-dropdown:focus{
+    outline: none;
+  }
+  
+  

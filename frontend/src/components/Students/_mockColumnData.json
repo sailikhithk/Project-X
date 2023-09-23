@@ -2,14 +2,14 @@
   {
     "field": "serialNumber",
     "headerName": "SL NO",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "flex": 1
   },
   {
     "field": "name",
     "headerName": "Name",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "editable": true,
     "flex": 1
@@ -17,7 +17,7 @@
   {
     "field": "department",
     "headerName": "Department",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "editable": true,
     "flex": 1
@@ -25,7 +25,7 @@
   {
     "field": "branch",
     "headerName": "Branch",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "editable": true,
     "flex": 1
@@ -33,7 +33,7 @@
   {
     "field": "numberOfInterviews",
     "headerName": "# of Interviews",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "editable": true,
     "flex": 1
@@ -41,7 +41,7 @@
   {
     "field": "averageScore",
     "headerName": "Avg Score",
-    "resizable": true,
+    "resizable": false,
     "sortable": true,
     "editable": true,
     "flex": 1

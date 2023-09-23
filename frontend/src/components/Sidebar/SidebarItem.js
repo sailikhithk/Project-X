@@ -16,12 +16,12 @@ const SidebarItem = ({ item }) => {
     >
       <ListItemIcon
         sx={{
-          color: "#00B2FF",
+          color: "#5271FF",
         }}
       >
         {item.sidebarProps.icon && item.sidebarProps.icon}
       </ListItemIcon>
-      {item.sidebarProps.displayText}
+      <span className="text fw-medium" style={{color: '#5271FF'}}>{item.sidebarProps.displayText}</span>
     </ListItemButton>
   ) : null;
 };

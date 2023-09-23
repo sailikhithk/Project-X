@@ -1,0 +1,41 @@
+.ag-theme-alpine{
+    /* --ag-data-color: red; */
+    --ag-header-foreground-color: #5271FF;
+    --ag-header-background-color: white;
+}
+
+.ag-root, .ag-header, .ag-cell {
+    background-color: white !important;
+  }
+
+.ag-theme-alpine .ag-cell {
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 400;
+    border-left: 2px solid  #cdcdcd;
+    border-bottom: 2px solid  #cdcdcd;
+}
+
+.ag-theme-alpine .ag-cell:last-child {
+   border-right: 2px solid #cdcdcd;
+}
+.ag-theme-alpine .ag-header {
+    font-family: 'Poppins';
+}
+.ag-theme-alpine .ag-header-cell {
+    font-size: 12px;
+    border-left: 2px solid  #cdcdcd;
+    border-bottom: 2px solid  #cdcdcd;
+    border-top: 2px solid  #cdcdcd;
+}
+
+.ag-theme-alpine .ag-header-cell:last-child {
+    border-right: 2px solid #cdcdcd;
+}
+
+.delete-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
