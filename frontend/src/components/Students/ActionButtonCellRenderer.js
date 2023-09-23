@@ -1,15 +1,12 @@
 import React from "react";
-import DeleteIcon from "../../images/delete.png";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ActionButtonCellRenderer = (props) => {
   const { deleteHandler = () => {} } = props;
 
   return (
     <div>
-      <img
-        src={DeleteIcon}
-        className="delete-icon"
-        onClick={() => deleteHandler(props)}
+      <DeleteIcon style={{cursor: 'pointer'}} onClick={() => deleteHandler(props)}
       />
     </div>
   );

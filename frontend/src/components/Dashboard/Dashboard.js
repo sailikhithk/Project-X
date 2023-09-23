@@ -20,8 +20,6 @@ import "./Dashboard.css";
 import CardContainer from "../CardContainer";
 import _mockCardLists from "./_mockCardLists.json";
 import _mockChartData from "./_mockChartData.json";
-import FilterIcon from "../../images/filter.png";
-import SelectComponent from "../Select/Select";
 import FilterComponent from "../Filter/Filter";
 
 const Dashboard = () => {
@@ -73,13 +71,14 @@ const Dashboard = () => {
           </div>
           {/* Average Interview Score and Skill Gap Rate Card */}
           <div className="col-lg-3">
-            <FilterComponent
-              icon={FilterIcon}
-              color={"#FF1616"}
-              handleSelectChange={handleSelectChange}
-              selectedValue={selectedValue}
-              options={options}
-            />
+            <div className="mb-3" style={{marginTop: '-50px'}}>
+              <FilterComponent
+                color={"#FF1616"}
+                handleSelectChange={handleSelectChange}
+                selectedValue={selectedValue}
+                options={options}
+              />
+            </div>
             <div className=" bg-white mb-3">
               <div className="" style={{ height: "155px" }}>
                 <div>

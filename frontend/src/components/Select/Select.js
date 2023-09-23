@@ -11,7 +11,7 @@ const SelectComponent = (props) => {
         style={{color: props.color}} 
       >
         {props.options.map((option, index) => (
-            <option key={index} value={option} className="text " style={{color: '#545454', fontSize: '12px'}}>{option}</option>
+            <option key={index} value={option} className="text " style={{color: '#545454', fontSize: '14px'}}>{option}</option>
         ))}
       </select>
     </div>

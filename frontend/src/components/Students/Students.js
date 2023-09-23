@@ -10,7 +10,6 @@ import _mockStudentData from "./_mockStudentData.json";
 import ActionButtonCellRenderer from "./ActionButtonCellRenderer";
 import './Students.css';
 import FilterComponent from "../Filter/Filter";
-import FilterIconBlack from '../../images/filter-black.png';
 
 const Students = () => {
   const containerStyle = useMemo(() => ({ width: "100%", height: "90%" }), []);
@@ -64,14 +63,12 @@ const Students = () => {
 
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', columnGap:'10px'}}>
         <FilterComponent
-              icon={FilterIconBlack}
               color={"black"}
               handleSelectChange={handleSelectChange}
               selectedValue={selectedValue}
               options={options}
             />
            <FilterComponent
-              icon={FilterIconBlack}
               color={"black"}
               handleSelectChange={handleSelectChange}
               selectedValue={selectedValue}
