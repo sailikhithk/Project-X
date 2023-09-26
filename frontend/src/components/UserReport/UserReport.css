@@ -1,49 +1,68 @@
 .page {
   page-break-after: always;
+  /* height: 842pt; */
 }
 
 /** report1 start */
 .report1-main-container {
   background: #b49fd8;
-  height: min-content;
+  height: 100%;
 }
+
 .report1-sub-container {
   background: #fff;
-  height: min-content;
-  margin: 6rem 3rem 6rem -12px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-left: thin solid #000;
+  height: 80%;
+  width: 85%;
+  margin: 6rem 0 6rem -12px;
+  border-radius: 0px 20px 20px 0px;
 }
+
 .report1-title {
   color: #b49fd8;
 }
+.report1-header{
+  margin-left: 120px;
+  color: #46315b;
+}
 .report1-cap-container {
-  margin-top: 10rem;
+  margin-top: 8rem;
+  margin-left: 120px;
+  width: 55%;
 }
 .report1-cap {
   color: #452b4e;
+  font-size: 55px;
+  font-family: 'Poppins';
 }
 .report1-footer {
   padding: 8px;
-  background: #a84e85;
+  background: #dd66af;
   border-radius: 20px;
   margin-left: 12px;
   width: 90%;
 }
 .report1-footer-txt {
   color: #fff;
+  font-family: 'Poppins';
+}
+
+.line-bar{
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 150px;
+  background-color: #46315b;
 }
 /** report1 end */
 
 /** report2 start */
 .report2-top-container {
-  height: 8vh;
+  height: 100px;
   background: #b49fd8;
 }
 .report2-btn-container {
-  background: #a84e85;
-  padding: 2px 20px;
+  background: #dd66af;
+  padding: 8px 30px;
   border-radius: 20px;
 }
 .report2-btn {
@@ -59,7 +78,9 @@
   color: #ff914d;
 }
 .report2-text {
-  color: #495057;
+  color: #452b4e;
+  font-size: 14px !important;
+  text-align: center;
 }
 .report2-section1 {
   border-left: thin solid #000;
@@ -95,16 +116,16 @@
 
 /** report3 start */
 .report3-btn-container {
-  background: #a84e85;
-  padding: 2px 20px;
-  border-radius: 20px;
+  background: #dd66af;
+  padding: 8px 20px;
+  border-radius: 30px;
 }
 .report3-btn {
   color: #fff;
 }
 .report3-description-container {
   padding: 15px;
-  background: #b49fd8;
+  background: #856FAB;
 }
 .report3-description {
   color: #fff;
@@ -113,7 +134,7 @@
   color: #452b4e;
 }
 .report3-growth {
-  color: #ff5757;
+  color: #dd66af;
 }
 .report3-red {
   color: #ff5757;
@@ -274,7 +295,7 @@
   color: #452b4e;
 }
 .report6-text {
-  color: #a84e85;
+  color: #dd66af;
 }
 .report6-section1 {
   border-top: thin solid #000;
@@ -330,7 +351,7 @@
   color: #fff;
 }
 .report7-wrapper {
-  background: #b49fd8;
+  background: #856FAB;
 }
 .report7-text-clr {
   color: #fff;
@@ -339,19 +360,42 @@
 
 /** report8 start */
 .report8-section1 {
-  border-top: thin solid #000;
-  border-left: thin solid #000;
-  border-right: thin solid #000;
   padding: 0;
   margin: 0;
   background: #b49fd8;
+  border-radius: 20px 20px 0px 0px;
 }
 .report8-section2 {
-  border-left: thin solid #000;
-  border-right: thin solid #000;
-  border-bottom: thin solid #000;
   padding: 0;
   margin: 0;
   background: #b49fd8;
+  border-radius: 0 0px 20px 20px;
 }
+
+.center-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.purple-horizontal-box {
+  width: 99px;
+  height: 1300px;
+  background:  #B49FD8;
+  border-radius: 0 20px 20px 0;
+}
+
+.purple-horizontal-box-reverse{
+  width: 199px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.page-container{
+  display: flex;
+  align-items: center;
+  border: 1px solid black
+}
+
+/* 595 x 842 pt'. PDF Size */
 /** report8 end */
