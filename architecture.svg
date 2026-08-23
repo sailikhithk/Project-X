@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-label="Project-X architecture: video interview AI pipeline">
+  <defs>
+    <marker id="px-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/>
+    </marker>
+    <linearGradient id="px-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .node { fill: #111827; stroke: #334155; stroke-width: 1.2; }
+      .node-ai { fill: #0e2a3a; stroke: #0ea5e9; stroke-width: 1.4; }
+      .label { fill: #e2e8f0; font-size: 13px; font-weight: 600; }
+      .sub { fill: #94a3b8; font-size: 10.5px; }
+      .path { stroke: #334155; stroke-width: 1.6; fill: none; }
+      .path-flow { stroke: #7dd3fc; stroke-width: 1.6; fill: none; opacity: 0.55; }
+      .title { fill: #f1f5f9; font-size: 16px; font-weight: 700; }
+      .caption { fill: #64748b; font-size: 10.5px; }
+    </style>
+  </defs>
+
+  <rect width="960" height="420" fill="url(#px-bg)"/>
+  <text x="20" y="32" class="title">Project-X - AI Video Interview Pipeline</text>
+  <text x="20" y="50" class="caption">FER 2013 emotion detection - gesture - vocal cue - ambience classification</text>
+
+  <!-- Stage 1: Video input -->
+  <g>
+    <rect x="30" y="180" width="120" height="70" rx="10" class="node"/>
+    <text x="90" y="208" text-anchor="middle" class="label">Video Input</text>
+    <text x="90" y="225" text-anchor="middle" class="sub">input/video.mp4</text>
+    <text x="90" y="240" text-anchor="middle" class="sub">OpenCV frames</text>
+  </g>
+
+  <!-- Stage 2: Frame extraction -->
+  <g>
+    <rect x="200" y="180" width="120" height="70" rx="10" class="node"/>
+    <text x="260" y="208" text-anchor="middle" class="label">Frame Sampler</text>
+    <text x="260" y="225" text-anchor="middle" class="sub">timed intervals</text>
+    <text x="260" y="240" text-anchor="middle" class="sub">audio split</text>
+  </g>
+
+  <!-- Stage 3: AI models (parallel) -->
+  <g>
+    <rect x="370" y="80" width="150" height="60" rx="10" class="node-ai"/>
+    <text x="445" y="105" text-anchor="middle" class="label">Emotion Detector</text>
+    <text x="445" y="122" text-anchor="middle" class="sub">FER 2013 - CNN</text>
+  </g>
+  <g>
+    <rect x="370" y="155" width="150" height="60" rx="10" class="node-ai"/>
+    <text x="445" y="180" text-anchor="middle" class="label">Gesture Analysis</text>
+    <text x="445" y="197" text-anchor="middle" class="sub">posture - eye contact</text>
+  </g>
+  <g>
+    <rect x="370" y="230" width="150" height="60" rx="10" class="node-ai"/>
+    <text x="445" y="255" text-anchor="middle" class="label">Vocal Cue Classifier</text>
+    <text x="445" y="272" text-anchor="middle" class="sub">tone - pace</text>
+  </g>
+  <g>
+    <rect x="370" y="305" width="150" height="60" rx="10" class="node-ai"/>
+    <text x="445" y="330" text-anchor="middle" class="label">Ambience Classifier</text>
+    <text x="445" y="347" text-anchor="middle" class="sub">noise - lighting</text>
+  </g>
+
+  <!-- Stage 4: Aggregation -->
+  <g>
+    <rect x="590" y="180" width="130" height="70" rx="10" class="node"/>
+    <text x="655" y="208" text-anchor="middle" class="label">Aggregator</text>
+    <text x="655" y="225" text-anchor="middle" class="sub">JSON merge</text>
+    <text x="655" y="240" text-anchor="middle" class="sub">per-interval</text>
+  </g>
+
+  <!-- Stage 5: Score + dashboard -->
+  <g>
+    <rect x="780" y="180" width="150" height="70" rx="10" class="node"/>
+    <text x="855" y="208" text-anchor="middle" class="label">React Dashboard</text>
+    <text x="855" y="225" text-anchor="middle" class="sub">StartX - Practice</text>
+    <text x="855" y="240" text-anchor="middle" class="sub">output/output.mp4</text>
+  </g>
+
+  <!-- Connectors -->
+  <path id="px-p1" d="M150,215 L200,215" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M320,215 L370,110" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M320,215 L370,185" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M320,215 L370,260" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M320,215 L370,335" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M520,110 L590,200" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M520,185 L590,215" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M520,260 L590,230" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path d="M520,335 L590,245" class="path-flow" marker-end="url(#px-arrow)"/>
+  <path id="px-p2" d="M720,215 L780,215" class="path-flow" marker-end="url(#px-arrow)"/>
+
+  <!-- Animated packets -->
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.6s" repeatCount="indefinite" path="M150,215 L200,215"/>
+  </circle>
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.6s" begin="0.2s" repeatCount="indefinite" path="M320,215 L370,110"/>
+  </circle>
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite" path="M320,215 L370,185"/>
+  </circle>
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.6s" begin="0.6s" repeatCount="indefinite" path="M320,215 L370,260"/>
+  </circle>
+  <circle r="4" fill="#fbbf24">
+    <animateMotion dur="2.6s" begin="0.8s" repeatCount="indefinite" path="M320,215 L370,335"/>
+  </circle>
+  <circle r="4" fill="#34d399">
+    <animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite" path="M520,110 L590,200"/>
+  </circle>
+  <circle r="4" fill="#34d399">
+    <animateMotion dur="2.6s" begin="1.5s" repeatCount="indefinite" path="M520,185 L590,215"/>
+  </circle>
+  <circle r="4" fill="#34d399">
+    <animateMotion dur="2.6s" begin="1.6s" repeatCount="indefinite" path="M520,260 L590,230"/>
+  </circle>
+  <circle r="4" fill="#34d399">
+    <animateMotion dur="2.6s" begin="1.7s" repeatCount="indefinite" path="M520,335 L590,245"/>
+  </circle>
+  <circle r="4" fill="#f472b6">
+    <animateMotion dur="2.6s" begin="2.2s" repeatCount="indefinite" path="M720,215 L780,215"/>
+  </circle>
+
+  <!-- Legend -->
+  <g transform="translate(20,390)">
+    <circle cx="6" cy="0" r="4" fill="#fbbf24"/>
+    <text x="16" y="4" class="caption">raw frames</text>
+    <circle cx="110" cy="0" r="4" fill="#34d399"/>
+    <text x="120" y="4" class="caption">AI features</text>
+    <circle cx="220" cy="0" r="4" fill="#f472b6"/>
+    <text x="230" y="4" class="caption">aggregated report</text>
+  </g>
+</svg>
