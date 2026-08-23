@@ -1,0 +1,71 @@
+# Project-X
+
+> AI-based video interview platform with automated emotion recognition, gesture analysis, vocal cue detection, and ambience classification from video recordings.
+
+Project-X is a full-stack AI video interview system. It analyzes video recordings of virtual interviews to detect emotions at time intervals, recognize body language cues (posture, eye contact, gestures), classify vocal cues, and assess the ambience of the interview environment (noise, lighting). The platform combines a Python backend with FER 2013 emotion detection, a React frontend, and a dashboard for institutions to manage and review interview sessions.
+
+## Architecture
+
+- Backend: Python (FastAPI-style), SQLite database, service-oriented routes for users and cases
+- Frontend: React (Create React App), dashboard with interview practice, search, and profile views
+- AI/ML: Emotion detection from video frames using FER 2013 dataset, gesture classification, vocal cue analysis, ambience/environment classification
+- Data: CSV and JSON inputs for emotions, gestures, vocal cues, ambience, and environment classification
+
+## Features
+
+- Emotion detection from video at timed intervals using FER 2013
+- Body language and gesture analysis: posture, eye contact tracking, nose picking, hair touching
+- Vocal cue classification from audio
+- Ambience and environment classification (noise level, lighting quality)
+- Institution management: student onboarding, interview practice, dashboard analytics
+- Two user flows: Interview Practice (candidate) and StartX (institution management)
+
+## Key files
+
+- backend/app.py: main backend entry point
+- backend/models/: user_model, role_model, case_master data models
+- backend/routes/: user and case_master API routes
+- backend/services/: business logic for users and cases
+- emotionDetection.py, emotionDetector.py: emotion recognition from video
+- frontend/src/: React app with Dashboard, InterviewPractice, and component library
+- input/data/: Emotions.json, Gestures.json, VocalCues.json, Ambience.json, Environment-classification.json
+- input/video.mp4: sample interview video for processing
+- output/output.mp4: processed video with annotations
+- requirements/design-document.txt: design spec and requirements
+- tree.txt: full project file tree
+
+## Dataset
+
+- FER 2013 (Facial Expression Recognition) from Kaggle: https://www.kaggle.com/datasets/msambare/fer2013
+- Custom datasets for gestures, vocal cues, ambience, and environment classification
+
+## Tech stack
+
+- Python, React, JavaScript, SQLite
+- FER 2013, OpenCV (video processing)
+- AWS (deployment target)
+
+## Repository
+
+- Source: https://github.com/sailikhithk/Project-X
+- License: MIT
+
+## Other AI/ML work by Sai Likhith Kanuparthi
+
+- [facadedriver](https://github.com/sailikhithk/facadedriver) - Model-agnostic orchestration for multi-LLM production systems: routing, retry, fallback, circuit breakers, per-request telemetry.
+- [mamba-from-scratch](https://github.com/sailikhithk/mamba-from-scratch) - From-scratch S4, Mamba-1 (S6), Mamba-2 (SSD) state-space models in pure PyTorch.
+- [Synthetic-AI-Image-Detector](https://github.com/sailikhithk/Synthetic-AI-Image-Detector) - Multi-signal deepfake detection with calibration, uncertainty quantification, and cross-generator eval.
+- [llm-production-engineering](https://github.com/sailikhithk/llm-production-engineering) - Field notes on LLM serving in production: cost tracking, eval-driven deployment, capacity planning, incident playbooks.
+- [alzheimers-drug-discovery-demo](https://github.com/sailikhithk/alzheimers-drug-discovery-demo) - QSAR machine learning for Alzheimer's drug discovery: predict bioactivity against Beta-amyloid A4 protein.
+- [Tags-recommender-system-for-community-forums](https://github.com/sailikhithk/Tags-recommender-system-for-community-forums) - NLP multi-label tag recommender with TF-IDF, neural networks, and active learning.
+- [CreditCardFraudDetectionUsingKafka](https://github.com/sailikhithk/CreditCardFraudDetectionUsingKafka) - Real-time fraud detection with Kafka, Spark EMR, and AWS Lambda.
+
+## Author
+
+Sai Likhith Kanuparthi - Senior AI Infrastructure & Systems Engineer.
+7+ years shipping production AI systems at Airbnb, Southwest Airlines, Shell,
+Eli Lilly, and Oracle. MS Computer Science from NYU.
+
+- GitHub: https://github.com/sailikhithk
+- LinkedIn: https://www.linkedin.com/in/sailikhithk
+- Portfolio: https://sailikhith.me
